@@ -1,41 +1,43 @@
-document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault();
+const formElement = document.getElementById("form");
 
-  const form = e.target;
-  const data = new FormData(form);
-  const action = form.action;
+if (formElement) {
+  formElement.addEventListener("submit", function (e) {
+    const form = e.target;
+    const data = new FormData(form);
+    const action = form.action;
 
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", action, true);
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", action, true);
 
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      try {
-        const result = JSON.parse(xhr.responseText);
-        if (result.result === "Success") {
-          const currentPath = window.location.pathname;
-          if (currentPath === "/" || currentPath === "/index.html") {
-            window.location.href = "https://prt.mn/TEY37tjI2";
-          } else if (currentPath === "/tai_chi.html") {
-            window.location.href = "https://prt.mn/DC82FfqAwSt";
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        try {
+          const result = JSON.parse(xhr.responseText);
+          if (result.result === "Success") {
+            const currentPath = window.location.pathname;
+            if (currentPath === "/" || currentPath === "/index.html") {
+              window.location.href = "https://prt.mn/TEY37tjI2";
+            } else if (currentPath === "/tai_chi.html") {
+              window.location.href = "https://prt.mn/DC82FfqAwSt";
+            }
+          } else {
+            alert("Error sending data.");
           }
-        } else {
-          alert("Error sending data.");
+        } catch (err) {
+          console.error("Unable to make out the answer:", err);
         }
-      } catch (err) {
-        console.error("Unable to make out the answer:", err);
+      } else {
+        console.error("HTTP Error:", xhr.status);
       }
-    } else {
-      console.error("HTTP Error:", xhr.status);
-    }
-  };
+    };
 
-  xhr.onerror = function () {
-    console.error("Error while requesting");
-  };
+    xhr.onerror = function () {
+      console.error("Error while requesting");
+    };
 
-  xhr.send(data);
-});
+    xhr.send(data);
+  });
+}
 
 $(".buy_course_btn").on("click", function (e) {
   e.preventDefault();
@@ -55,12 +57,26 @@ $(".buy_course_btn").on("click", function (e) {
 });
 
 //show course block
-$("#btn_course").on("click", function () {
-  $(".drop_list").fadeToggle("fast");
-});
+// $("#btn_course").on("click", function () {
+//   $(".drop_list").fadeToggle("fast");
+// });
 
-$(window).on("pageshow", function (event) {
-  $(".drop_list").hide();
+// $(window).on("pageshow", function (event) {
+//   $(".drop_list").hide();
+// });
+
+$(".select_course .btn_cours").on("click", function () {
+  let dropList = $(this).siblings(".drop_list");
+
+  // закрыть другие
+  $(".drop_list").not(dropList).fadeOut("fast").removeClass("flex");
+
+  // открыть текущее
+  if (dropList.is(":visible")) {
+    dropList.fadeOut("fast").removeClass("flex");
+  } else {
+    dropList.addClass("flex").hide().fadeIn("fast");
+  }
 });
 
 $("#offerta").on("click", function () {
@@ -98,36 +114,45 @@ $(".close_modal_policy2").on("click", function () {
 });
 
 // Слайдер на відгуки
-
 const slider = document.querySelector(".wrapp_feedback_items");
-let isDown = false;
-let startX;
-let scrollLeft;
 
-slider.addEventListener("mousedown", (e) => {
-  isDown = true;
-  slider.classList.add("active");
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-slider.addEventListener("mouseleave", () => {
-  isDown = false;
-});
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-});
-slider.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2;
-  slider.scrollLeft = scrollLeft - walk;
-});
+if (slider) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener("mousedown", (e) => {
+    isDown = true;
+    slider.classList.add("active");
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener("mouseleave", () => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mouseup", () => {
+    isDown = false;
+    slider.classList.remove("active");
+  });
+
+  slider.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+}
 
 // Заборона на копіювання тексту в відгуках
-slider.addEventListener("copy", (e) => {
-  e.preventDefault();
-});
+if (slider) {
+  slider.addEventListener("copy", (e) => {
+    e.preventDefault();
+  });
+}
 
 // Анімований список
 let consumerList = document.querySelector(".consumer_list");
