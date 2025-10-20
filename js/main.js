@@ -155,7 +155,8 @@ if (slider) {
 }
 
 // Анімований список
-let consumerList = document.querySelector(".consumer_list");
+// let consumerList = document.querySelector(".consumer_list");
+const consumerList = document.querySelectorAll(".consumer_list");
 let blockYinTop = document.querySelectorAll(".block_yin_top");
 let blockYin = document.querySelectorAll(".second_list");
 let aboutBtn = document.querySelectorAll(".about_btn");
@@ -187,8 +188,12 @@ function handleFadeIn(element, extraElements = []) {
 }
 
 if (consumerList) {
-  handleFadeIn(consumerList);
-  window.addEventListener("scroll", () => handleFadeIn(consumerList));
+  // handleFadeIn(consumerList);
+  // window.addEventListener("scroll", () => handleFadeIn(consumerList));
+  consumerList.forEach((list) => {
+    handleFadeIn(list);
+    window.addEventListener("scroll", () => handleFadeIn(list));
+  });
 }
 
 if (feedbackList) {
