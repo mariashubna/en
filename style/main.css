@@ -1210,7 +1210,8 @@ form {
 .record_list_item_text {
   font-size: 20px;
 }
-.record_list_item_link {
+.record_list_item_link,
+.individual_list_item_link {
   font-size: 16px;
   display: block;
   text-decoration: none;
@@ -1234,6 +1235,8 @@ form {
 }
 
 .record_list_item_link:hover,
+.individual_list_item_link:hover,
+.individual_list_item_link:focus,
 .record_list_item_link:focus {
   color: black;
   border: solid 2px #002c43;
@@ -1329,7 +1332,7 @@ form {
   font-weight: 700;
 }
 .individual {
-  padding: 40px 0 80x;
+  padding: 40px 0 80px;
 }
 
 .individual_img {
@@ -1349,13 +1352,15 @@ form {
   justify-content: space-between;
   height: 427px;
   align-items: center;
+  margin-bottom: 20px;
 }
 .individual_item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   width: calc(100% - 50px);
+  justify-content: space-between;
 }
 .individual_item_heading {
   font-weight: 700;
