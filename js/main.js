@@ -114,7 +114,7 @@ $(".close_modal_policy2").on("click", function () {
 });
 
 // Слайдер на відгуки
-const slider = document.querySelector(".wrapp_feedback_items");
+const slider = document.querySelector(".wrapp_feedback_item");
 
 if (slider) {
   let isDown = false;
@@ -240,7 +240,33 @@ document.querySelectorAll(".lazy-video").forEach((video) => {
   });
 });
 
-// Відкриття меню на фокусі
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".psycholog_contact");
+  const listItems = document.querySelectorAll(".psychology_list li");
+  const button = document.querySelector(".telegram_btn");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          listItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add("show");
+            }, index * 600);
+          });
+          setTimeout(() => {
+            button.classList.add("show");
+          }, listItems.length * 600 + 400);
+
+          observer.unobserve(section);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  observer.observe(section);
+});
 
 const btnCourse = document.getElementById("btn_course");
 
