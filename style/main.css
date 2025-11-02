@@ -6,6 +6,7 @@
     opacity: 1;
   }
 }
+
 /* Header */
 .header {
   padding: 10px 0 8px;
@@ -1392,7 +1393,225 @@ form {
   text-align: center;
   color: #25282d;
 }
-.individual_list_item_link {
+/* psyhology */
+.psychology {
+}
+.psychology_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.psychology_wrap {
+  position: relative;
+  border-radius: 20px;
+  /* padding-top: 200px;
+  padding-bottom: 200px; */
+  background: none;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  padding: 40px;
+  gap: 50px;
+  align-items: center;
+}
+.psychology_wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #f2dfcf 0%, #ebcbb1 49.57%);
+  opacity: 0.39;
+  z-index: -1;
+  border-radius: 20px 20px 0 0;
+}
+
+.psychology_title {
+  font-weight: 500;
+  text-transform: none;
+}
+
+.psychology_span {
+  font-weight: 700;
+}
+.psychology_img {
+  border-radius: 20px;
+  box-shadow: 0px 12px 24px 0px #818a8c;
+}
+.request,
+.approach {
+  padding: 40px 0;
+}
+.request {
+  position: relative;
+}
+
+.decoration_img_psyh {
+  position: absolute;
+  left: 0;
+  top: -70px;
+  z-index: 5;
+}
+.education {
+  padding: 40px 0;
+}
+.decoration_right_psyh {
+  position: absolute;
+  right: -25px;
+  top: -180px;
+  z-index: 5;
+  width: 124px;
+  height: 402px;
+}
+.education_container {
+  font-size: 46px;
+  line-height: 1.62;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 0;
+  padding: 30px 10px;
+  background: var(--block_backround_color);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.education_list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.education_item {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  max-height: 480px;
+  width: 400px;
+  padding: 45px;
+  display: block;
+  flex: 0 0 auto;
+  background-color: #002c43d9;
+  color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.education_title {
+  margin: 0;
+}
+.education_item p {
+  height: unset;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.education_center {
+  margin: 0 auto;
+  cursor: unset;
+}
+.approach {
+  padding: 40px 0;
+}
+.approach > div > p {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+}
+.approach_text {
+  margin-bottom: 20px;
+}
+.psycholog_contact {
+  padding: 40px 0 80px;
+  position: relative;
+}
+.psychology_list {
+  width: 1115px;
+  gap: 30px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.psychology_list > li {
+  max-width: 250px;
+  min-width: 195px;
+  gap: 17px;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.psychology_list > li > p {
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+  font-weight: 700;
+  max-width: 185px;
+}
+.psychology_list li,
+.telegram_btn {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.telegram_btn {
+  width: 350px;
+  height: 66px;
+  font-size: 20px;
+  line-height: 1.2;
+  display: block;
+  text-decoration: none;
+  background-image: var(--btn_background_color);
+  background-color: #0070aa;
+  border: solid 2px transparent;
+  border-radius: 33px;
+  padding: 17px 24px;
+  font-family: var(--second_font);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: 700;
+}
+
+.telegram_btn:hover {
+  color: black;
+  border: solid 2px #002c43;
+  background-image: none;
+  background-color: transparent;
+}
+.psychology_list li.show,
+.telegram_btn.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* adapt */
@@ -1756,6 +1975,9 @@ form {
   }
   .wrapp_left_block_teacher {
     max-width: 818px;
+  }
+  .education_title {
+    margin: 0;
   }
 }
 
@@ -2185,6 +2407,9 @@ form {
   .wrapp_main_text2 {
     margin-bottom: 0;
   }
+  .education_title {
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -2286,6 +2511,14 @@ form {
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
   animation-delay: 2.4s;
+  animation-fill-mode: forwards;
+}
+.anim-fade-in > li:nth-child(5) {
+  animation-name: fadein;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+  animation-delay: 3.2s;
   animation-fill-mode: forwards;
 }
 
