@@ -762,6 +762,10 @@ form {
   max-width: 60%;
   margin: 0 auto;
 }
+.marathon_text {
+  margin-bottom: 40px;
+}
+
 /* footer block */
 
 .wrapp_footer {
@@ -1258,7 +1262,6 @@ form {
   top: 640px;
   left: 0px;
   opacity: 80%;
-  /* clip-path: polygon(25px 0, 100% 0, 100% 100%, 25px 100%); */
 }
 
 .decoration_orange_image_regular {
@@ -1290,8 +1293,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* opacity: 0; */
-  /* /* align-items: center; */
 }
 .regular_list_item_title {
   font-family: var(--second_font);
@@ -1383,8 +1384,6 @@ form {
   text-align: center;
   margin-bottom: 20px;
 }
-.individual_sublist {
-}
 .individual_sublist_item_text {
   font-family: var(--second_font);
   font-weight: 400;
@@ -1394,8 +1393,11 @@ form {
   color: #25282d;
 }
 /* psyhology */
+
 .psychology {
+  padding-bottom: 40px;
 }
+
 .psychology_container {
   display: flex;
   flex-direction: column;
@@ -1403,11 +1405,13 @@ form {
   padding-left: 20px;
   padding-right: 20px;
 }
-.psychology_wrap {
+.psychology_wrap,
+.coach_wrap,
+.tai_wrap,
+.tai_location_wrap,
+.chan_wrap {
   position: relative;
   border-radius: 20px;
-  /* padding-top: 200px;
-  padding-bottom: 200px; */
   background: none;
   z-index: 1;
   overflow: hidden;
@@ -1417,7 +1421,11 @@ form {
   gap: 50px;
   align-items: center;
 }
-.psychology_wrap::before {
+.psychology_wrap::before,
+.coach_wrap::before,
+.tai_wrap::before,
+.tai_location_wrap::before,
+.chan_wrap::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1435,7 +1443,10 @@ form {
 .psychology_span {
   font-weight: 700;
 }
-.psychology_img {
+.psychology_img,
+.coach_img,
+.tai_img,
+.chan_img {
   border-radius: 20px;
   box-shadow: 0px 12px 24px 0px #818a8c;
 }
@@ -1579,7 +1590,8 @@ form {
   transition: all 0.6s ease;
 }
 
-.telegram_btn {
+.telegram_btn,
+.telegram_btn_marathon {
   width: 350px;
   height: 66px;
   font-size: 20px;
@@ -1601,8 +1613,12 @@ form {
   margin: 0 auto;
   font-weight: 700;
 }
+.telegram_btn_marathon {
+  height: 88px;
+}
 
-.telegram_btn:hover {
+.telegram_btn:hover,
+.telegram_btn_marathon:hover {
   color: black;
   border: solid 2px #002c43;
   background-image: none;
@@ -1614,6 +1630,187 @@ form {
   transform: translateY(0);
 }
 
+/* coach */
+.coach_title {
+  margin-bottom: 20px;
+  text-transform: unset;
+}
+.coach_text {
+  flex: 1;
+}
+.coach_text p {
+  font-size: 28px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+  font-weight: 500;
+  text-align: center;
+}
+
+.coach_wrap {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.coach {
+  padding: 80px 0 40px;
+  position: relative;
+}
+.coach_item {
+  gap: 10px;
+}
+.coach_item p {
+  margin-bottom: 0;
+}
+
+/* tai_chi */
+.tai_container {
+  padding: 0 40px;
+}
+.tai_wrap,
+.chan_wrap {
+  display: flex;
+  gap: 50px;
+}
+.tai_text,
+.chan_text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.tai_text p,
+.chan_text p {
+  font-size: 28px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+  font-weight: 500;
+  text-align: center;
+}
+.tai_title {
+  margin-bottom: 0;
+}
+.tai_info {
+  padding: 40px 0;
+}
+.tai_info_text {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+}
+.tai_info_title {
+  margin-bottom: 0;
+}
+.tai_info_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tai_info_time {
+  width: 1115px;
+  gap: 30px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tai_info_time li.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.tai_info_time li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  max-width: 250px;
+  min-width: 195px;
+  gap: 17px;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  height: 70px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+  font-weight: 700;
+}
+.tai_info_price li {
+  max-width: 350px;
+  height: 200px;
+  padding: 35px;
+}
+.tai_location,
+.tai_location2 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+  margin-bottom: 20px;
+}
+.tai_section,
+.tai_price_section,
+.tai_time_section {
+  position: relative;
+}
+.tai_location_section {
+  padding: 40px 60px 80px;
+}
+.tai_location_section a {
+  height: 66px;
+  width: 200px;
+}
+
+.tai_location_wrap {
+  display: block;
+}
+.tai_location2 {
+  margin-bottom: 40px;
+}
+.decoration_blue_tai {
+  position: absolute;
+  left: 0;
+}
+.decoration_orange_tai {
+  position: absolute;
+  left: 80px;
+}
+/* chan */
+.chan_section {
+  padding: 0 0 40px;
+}
+.chan_container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.chan_deco {
+  top: 550px;
+}
+.chan_info,
+.chan_foundation {
+  padding: 40px 0;
+}
+.chan_img {
+  width: 500px;
+}
+.chan_wrap {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.chan_foundation_wrap p {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: var(--second_font);
+}
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -1978,6 +2175,9 @@ form {
   }
   .education_title {
     margin: 0;
+  }
+  .tai_info_title {
+    margin-bottom: 0;
   }
 }
 
@@ -2409,6 +2609,9 @@ form {
   }
   .education_title {
     margin: 0;
+  }
+  .tai_info_title {
+    margin-bottom: 0;
   }
 }
 

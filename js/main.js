@@ -219,6 +219,32 @@ window.addEventListener("scroll", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".tai_info_time li");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          items.forEach((item, index) => {
+            if (!item.classList.contains("show")) {
+              setTimeout(() => {
+                item.classList.add("show");
+              }, index * 500);
+            }
+          });
+          observer.disconnect();
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  items.forEach((item) => observer.observe(item));
+});
+
 // Відкладене завантаження відео для ортимізації
 
 document.querySelectorAll(".lazy-video").forEach((video) => {

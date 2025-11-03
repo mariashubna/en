@@ -117,76 +117,102 @@
       </div>
     </header>
     <main>
-      <section class="wrapp_block_form">
-        <div class="container form_container">
-          <div class="right_block_form">
-            <h2>Ви всього за 1 крок до вивчення цигун</h2>
-            <p class="form_info">
-              Напишіть у формі зліва вашу електронну адресу, на яку вам буде
-              поширено доступ до папки із матеріалами курсу і перейдіть до
-              оплати. Доступ буде надано протягом 24 годин з моменту оплати.
-            </p>
-            <p class="form_access">
-              Доступ до матеріалів курсу не обмежений по часу.
-            </p>
-            <p class="form_price">Вартість курсу - <span>490 грн</span></p>
-          </div>
-          <div class="left_block_form">
-            <form
-              class="form"
-              id="form"
-              action="https://script.google.com/macros/s/AKfycbzQNM5Dll4Mggg-RZ2MkGiYAfRKXvJNLsmE7gRT7kAgFxGznJ-0yFYF2Rsm00MnyAYM7Q/exec"
-              method="POST"
-            >
-              <div>
-                <label class="label" for="name">Введіть імʼя</label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Імʼя"
-                  required
-                />
-              </div>
-              <div class="block_number">
-                <label class="label" for="phone_region" id="phone_region_label"
-                  >Оберіть код країни</label
-                >
-                <select
-                  name="phone_region"
-                  id="phone_region"
-                  aria-labelledby="phone_region_label"
-                >
-                  <option value="UA +380">UA +380</option>
-                </select>
-                <label class="label" for="phone">Введіть номер телефону</label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="Номер телефону"
-                  required
-                />
-              </div>
-              <label class="label" for="email">Введіть електрону пошту</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Введіть ел. пошту тут"
-                required
+      <section>
+        <div class="container psychology_container">
+          <div class="coach_wrap">
+            <div class="coach_text">
+              <h1 class="coach_title wrapp_main_title">
+                Сергій Доброжанський — Бізнес-коуч ECF з питань мотивації
+              </h1>
+              <p>Найчастіше фраза, яку я чую від своїх клієнтів:</p>
+              <p>“Гарне питання”</p>
+            </div>
+            <picture>
+              <source srcset="./img/sergii.webp" type="image/webp" />
+              <img
+                class="coach_img"
+                src="./img/sergii.jpg"
+                alt="Instructor"
+                width="300px"
               />
-              <input type="hidden" name="course" value="Цигун" />
-              <button id="submit_form_btn">Оплатити</button>
-            </form>
+            </picture>
           </div>
-          <img
-            class="last_right_deko"
-            src="./img/last_right_deko.svg"
-            alt="Тай Чі"
-            width="73"
-            height="208"
-          />
+        </div>
+      </section>
+      <section class="coach">
+        <img
+          class="decoration_img_psyh"
+          src="./img/decoration1.svg"
+          alt="Deco"
+          width="225"
+          height="225"
+        />
+        <div class="coach_bio container">
+          <h2 class="consumer_title">Філософія моєї роботи</h2>
+          <ul class="consumer_list">
+            <li class="item_consumer_text coach_item">
+              <p>Я не даю порад і не навчаю.</p>
+              <p>
+                Я уважно слухаю — і ставлю питання, які допомагають вам
+                подивитись на свій запит під різними кутами, щоб самостійно
+                знайти власне рішення.
+              </p>
+              <p>У цьому я бачу найбільшу цінність коучингу.</p>
+            </li>
+            <li class="item_consumer_text coach_item">
+              <p>Моя спеціалізація — відновлення мотивації.</p>
+              <p>
+                Я багато років досліджую, як вона зникає і як знову
+                пробуджується.
+              </p>
+            </li>
+            <li class="item_consumer_text coach_item">
+              <p>
+                Мотивація — це енергія, що наповнює наші дії сенсом. Як коуч, я
+                допомагаю вам знайти цю енергію всередині себе і спрямувати її
+                на те, що для вас справді важливо.
+              </p>
+            </li>
+            <li class="item_consumer_text coach_item">
+              <p>
+                Якщо ви відчуваєте, що втратили мотивацію — я поруч, щоб
+                допомогти вам її повернути.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="psycholog_contact">
+        <img
+          class="decoration_right_psyh"
+          src="./img/last_right_deko.svg"
+          alt="Deco"
+          width="73"
+          height="208"
+        />
+        <div class="container">
+          <h2 class="block_text">Формат консультацій</h2>
+
+          <ul class="psychology_list">
+            <li class="first_element">
+              <p>Онлайн</p>
+            </li>
+            <li class="second_element">
+              <p>Тривалість сесії: 50 хвилин</p>
+            </li>
+            <li class="three_element">
+              <p>Вартість: 2000 грн</p>
+            </li>
+          </ul>
+
+          <a
+            href="http://t.me/dobrozhanskyi_coach"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="telegram_btn"
+          >
+            Записатися на коуч-сесію
+          </a>
         </div>
       </section>
     </main>
