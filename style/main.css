@@ -1406,7 +1406,8 @@ form {
   padding-right: 20px;
 }
 .psychology_wrap,
-.coach_wrap {
+.coach_wrap,
+.tai_wrap {
   position: relative;
   border-radius: 20px;
   background: none;
@@ -1419,7 +1420,8 @@ form {
   align-items: center;
 }
 .psychology_wrap::before,
-.coach_wrap::before {
+.coach_wrap::before,
+.tai_wrap::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -1653,6 +1655,23 @@ form {
 }
 
 /* tai_chi */
+.tai_container {
+  padding: 40px;
+}
+.tai_wrap {
+  display: flex;
+  gap: 50px;
+}
+.tai_text {
+  max-width: 800px;
+  width: 800px;
+}
+.tai_title {
+}
+.wrapp_main_title {
+}
+.tai_img {
+}
 /* adapt */
 
 @media screen and (min-width: 386px) {
