@@ -1,41 +1,71 @@
-const formElement = document.getElementById("form");
+// const formElement = document.getElementById("form");
 
-if (formElement) {
-  formElement.addEventListener("submit", function (e) {
-    const form = e.target;
-    const data = new FormData(form);
-    const action = form.action;
+// if (formElement) {
+//   formElement.addEventListener("submit", function (e) {
+//     const form = e.target;
+//     const data = new FormData(form);
+//     const action = form.action;
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", action, true);
+//     const xhr = new XMLHttpRequest();
+//     xhr.open("POST", action, true);
 
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        try {
-          const result = JSON.parse(xhr.responseText);
-          if (result.result === "Success") {
-            const currentPath = window.location.pathname;
-            if (currentPath === "/" || currentPath === "/index.html") {
-              window.location.href = "https://prt.mn/TEY37tjI2";
-            } else if (currentPath === "/tai_chi.html") {
-              window.location.href = "https://prt.mn/DC82FfqAwSt";
-            }
-          } else {
-            alert("Error sending data.");
-          }
-        } catch (err) {
-          console.error("Unable to make out the answer:", err);
-        }
+//     xhr.onload = function () {
+//       if (xhr.status === 200) {
+//         try {
+//           const result = JSON.parse(xhr.responseText);
+//           if (result.result === "Success") {
+//             const currentPath = window.location.pathname;
+//             if (currentPath === "/" || currentPath === "/index.html") {
+//               window.location.href = "https://prt.mn/TEY37tjI2";
+//             } else if (currentPath === "/tai_chi.html") {
+//               window.location.href = "https://prt.mn/DC82FfqAwSt";
+//             }
+//           } else {
+//             alert("Error sending data.");
+//           }
+//         } catch (err) {
+//           console.error("Unable to make out the answer:", err);
+//         }
+//       } else {
+//         console.error("HTTP Error:", xhr.status);
+//       }
+//     };
+
+//     xhr.onerror = function () {
+//       console.error("Error while requesting");
+//     };
+
+//     xhr.send(data);
+//   });
+// }
+
+const form = document.getElementById("form");
+
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // зупиняємо стандартну відправку
+
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        body: formData, // надсилаємо як FormData, не URLSearchParams
+      });
+
+      const result = await res.json();
+      console.log("Server response:", result);
+
+      if (result.result === "Success") {
+        // редирект на сторінку оплати
+        window.location.href = "https://prt.mn/TEY37tjI2";
       } else {
-        console.error("HTTP Error:", xhr.status);
+        alert("Сталася помилка при відправці форми");
       }
-    };
-
-    xhr.onerror = function () {
-      console.error("Error while requesting");
-    };
-
-    xhr.send(data);
+    } catch (err) {
+      console.error("Помилка при відправці:", err);
+      alert("Помилка при відправці форми. Спробуйте ще раз.");
+    }
   });
 }
 

@@ -147,6 +147,10 @@
   text-align: center;
   color: #001a49;
   margin-bottom: 10px;
+}
+
+.wrapp_main_subtitle_index {
+  color: white;
   text-transform: uppercase;
 }
 
@@ -159,7 +163,12 @@
   text-align: center;
   color: #001a49;
   margin-bottom: 10px;
+}
+
+.wrapp_main_title_index {
+  color: white;
   text-transform: uppercase;
+  max-width: 600px;
 }
 .wrapp_main_text {
   margin-bottom: 20px;
@@ -169,6 +178,22 @@
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+}
+
+.wrapp_main_text_index {
+  color: white;
+  max-width: 400px;
+}
+.main_container_lines {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.white_line {
+  width: 120px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .block_align {
@@ -290,6 +315,11 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+.about_text_marathon {
+  margin: 0 auto;
+}
+
 .block_yin {
   display: flex;
   justify-content: space-between;
@@ -362,12 +392,28 @@
   text-align: center;
   margin-bottom: 30px;
 }
-.consumer_list {
+.consumer_list,
+.block_yin_list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.item_consumer_text {
+.consumer_list_participation {
+  margin-bottom: 40px;
+}
+.consumer_list_marathon {
+  margin-bottom: 40px;
+}
+
+.consumer_lesson {
+  margin-bottom: 40px;
+}
+
+/* .block_yin_list {
+  margin-bottom: 40px;
+} */
+.item_consumer_text,
+.block_yin_item {
   width: 100%;
   background: var(--block_backround_color);
   border-radius: 20px;
@@ -378,20 +424,30 @@
   opacity: 0;
   align-items: center;
 }
-.item_consumer_text > h3 {
+
+.item_consumer_lesson {
+  background: #002c43d9;
+}
+
+/* .item_consumer_text > h3 {
   font-family: var(--second_font);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.5;
   text-align: center;
-}
-.item_consumer_text > p {
+} */
+.item_consumer_text > p,
+.block_yin_item > p {
   font-family: var(--second_font);
   color: #25282d;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
+}
+
+.item_consumer_lesson > p {
+  color: white;
 }
 
 /* end about consumer */
@@ -435,6 +491,9 @@
   padding: 30px 10px;
   border-radius: 20px;
 }
+.feedback_container_training {
+  padding-bottom: 60px;
+}
 .feedback_title {
   font-family: var(--main_font);
   font-weight: 700;
@@ -455,6 +514,28 @@
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.wrapp_feedback_part {
+  margin-bottom: 40px;
+}
+
+.feedback_scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.feedback_scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapp_feedback_center {
+  cursor: unset;
+  margin-bottom: 40px;
 }
 .wrapp_feedback_items:active {
   cursor: grabbing;
@@ -518,13 +599,24 @@
   gap: 80px;
   padding: 15px 0;
 }
+
 .teacher_container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.teacher_container .consumer_title {
+  margin-bottom: 0;
+}
 .teacher_img {
   margin-bottom: 25px;
+}
+
+.teacher_img_chan {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  display: block;
 }
 .wrapp_left_block_teacher {
   max-width: 615px;
@@ -541,7 +633,7 @@
   text-align: center;
   margin-bottom: 15px;
 }
-.wrapp_left_block_teacher > .name_teacher {
+.wrapp_left_block_teacher > div > .name_teacher {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.5;
@@ -758,7 +850,6 @@ form {
   box-shadow: 0px 12px 24px 0px #818a8c;
 }
 .wrapp_main_text2 {
-  margin-bottom: 0;
   max-width: 60%;
   margin: 0 auto;
 }
@@ -897,6 +988,16 @@ form {
 }
 
 /* page 2 */
+.hero-small-photo,
+.hero-photo-small {
+  max-width: unset;
+  height: 300px;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  display: block;
+  border-radius: 20px;
+}
 .hero {
   padding: 0 10px 0 10px;
 }
@@ -929,7 +1030,7 @@ form {
   align-items: center;
 }
 .main_test {
-  margin: 0 auto 30px;
+  margin: 0 auto;
   font-family: var(--main_font);
   width: 100%;
 }
@@ -958,14 +1059,17 @@ form {
 
 .left_text_second {
   font-family: var(--second_font);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 18px;
   line-height: 1.5;
   color: #25282d;
   margin-bottom: 30px;
   text-align: center;
 }
-
+.left_text_second > span {
+  color: rgb(139, 0, 0);
+  font-weight: 800;
+}
 .left_price_second {
   font-size: 20px;
   line-height: 1.5;
@@ -1062,8 +1166,8 @@ form {
 .main_index {
   position: relative;
   border-radius: 20px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 300px;
+  padding-bottom: 300px;
   background: none;
   z-index: 1;
   overflow: hidden;
@@ -1071,16 +1175,17 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.main_index::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, #f2dfcf 0%, #ebcbb1 49.57%);
-  opacity: 0.39;
-  z-index: -1;
-  border-radius: 20px 20px 0 0;
+  background-color: gray;
+  background: linear-gradient(
+      57deg,
+      rgba(0, 0, 0, 0.5) 40%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/main.JPG");
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .decoration_images_main {
@@ -1153,7 +1258,7 @@ form {
   background-color: transparent;
   margin: 0;
   color: white;
-  height: 52px;
+  height: 72px;
   padding: 10px 24px;
   font-family: var(--second_font);
   border-radius: 20px;
@@ -1230,7 +1335,7 @@ form {
     background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 178px;
+  width: 208px;
   height: 53px;
   font-weight: 700;
   line-height: 1.2;
@@ -1315,6 +1420,11 @@ form {
   margin: 0 auto;
   max-width: 450px;
 }
+.regular_sublist_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .regular_sublist li {
   list-style: circle;
 
@@ -1352,10 +1462,11 @@ form {
   flex-direction: column;
   gap: 20px;
   justify-content: space-between;
-  height: 427px;
+  height: 470px;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .individual_item {
   display: flex;
   flex-direction: column;
@@ -1583,8 +1694,7 @@ form {
   font-weight: 700;
   max-width: 185px;
 }
-.psychology_list li,
-.telegram_btn {
+.psychology_list li {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
@@ -1690,13 +1800,19 @@ form {
   margin-bottom: 0;
 }
 .tai_info {
-  padding: 40px 0;
+  padding: 80px 0 40px;
 }
 .tai_info_text {
   text-align: center;
   font-size: 24px;
   line-height: 1.5;
   font-family: var(--second_font);
+}
+.tai_info_link {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+  color: black;
 }
 .tai_info_title {
   margin-bottom: 0;
@@ -1761,8 +1877,18 @@ form {
 .tai_time_section {
   position: relative;
 }
+
+.about_teacher_wrapp_training {
+  position: relative;
+}
+.tai_loc_section {
+  padding-bottom: 40px;
+}
 .tai_location_section {
   padding: 40px 60px 80px;
+}
+.tai_location_chan {
+  padding-bottom: 40px;
 }
 .tai_location_section a {
   height: 66px;
@@ -1814,7 +1940,8 @@ form {
 /* adapt */
 
 @media screen and (min-width: 386px) {
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 320px;
     height: auto;
   }
@@ -1875,9 +2002,9 @@ form {
   }
 }
 @media screen and (min-width: 600px) {
-  .left_title {
+  /* .left_title {
     max-width: 600px;
-  }
+  } */
 }
 @media screen and (min-width: 700px) {
   .left_list {
@@ -1921,9 +2048,9 @@ form {
     line-height: 1.5;
   }
 
-  .wrapp_main_text2 {
+  /* .wrapp_main_text2 {
     margin-bottom: 0;
-  }
+  } */
 
   .right_block_form > h2 {
     font-size: 40px;
@@ -1953,7 +2080,7 @@ form {
     line-height: 1.5;
   }
   .left_text_second {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.5;
     max-width: 818px;
   }
@@ -1978,7 +2105,7 @@ form {
   .left_title {
     font-size: 40px;
     line-height: 1.62;
-    width: 530px;
+    /* width: 530px; */
   }
   .left_list {
     padding: 0;
@@ -2015,6 +2142,11 @@ form {
     margin-bottom: 30px;
     width: 718px;
   }
+
+  .about_text_marathon2 {
+    margin-bottom: 0;
+  }
+
   .block_yin {
     gap: 80px;
     margin-bottom: 30px;
@@ -2042,14 +2174,16 @@ form {
     line-height: 1.62;
     margin-bottom: 30px;
   }
-  .item_consumer_text {
+  .item_consumer_text,
+  .block_yin_item {
     padding: 20px 50px;
   }
-  .item_consumer_text > h3 {
+  /* .item_consumer_text > h3 {
     font-size: 24px;
     line-height: 1.62;
-  }
-  .item_consumer_text > p {
+  } */
+  .item_consumer_text > p,
+  .block_yin_item > p {
     max-width: 718px;
     font-size: 20px;
     line-height: 1.5;
@@ -2072,6 +2206,9 @@ form {
   .feedback_container {
     padding: 30px 20px;
     max-width: unset;
+  }
+  .feedback_container_training {
+    padding-bottom: 60px;
   }
   .feedback_item {
     width: 550px;
@@ -2099,12 +2236,17 @@ form {
   .about_teacher_wrapp {
     padding: 20px 0;
   }
-  .teacher_img {
+  .about_teacher_wrapp_part {
+    padding-top: 20px;
+  }
+  .teacher_img,
+  .teacher_img_chan {
     width: 419px;
     height: 382px;
     margin-bottom: 30px;
   }
-  .wrapp_left_block_teacher > .name_teacher {
+
+  .wrapp_left_block_teacher > div > .name_teacher {
     font-size: 24px;
     line-height: 1.62;
   }
@@ -2185,7 +2327,8 @@ form {
   .video_tai {
     height: 350px;
   }
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 519px;
     height: 470px;
   }
@@ -2237,6 +2380,11 @@ form {
     width: 1040px;
     margin-bottom: 40px;
   }
+
+  .about_text_marathon2 {
+    margin-bottom: 0;
+  }
+
   .block_yin {
     width: 906px;
     gap: unset;
@@ -2345,13 +2493,12 @@ form {
   }
   .feedback_container {
     border-radius: 0;
-    padding: 30px 10px;
-  }
-  .feedback_container {
+    padding: 40px 10px;
     font-size: 46px;
     line-height: 1.62;
-    padding-top: 40px;
-    padding-bottom: 40px;
+  }
+  .feedback_container_training {
+    padding-bottom: 80px;
   }
   .feedback_title {
     margin-bottom: 40px;
@@ -2366,7 +2513,8 @@ form {
   .feedback_item {
     max-height: 480px;
   }
-  .item_consumer_text > p {
+  .item_consumer_text > p,
+  .block_yin_item > p {
     font-size: 20px;
     line-height: 1.5;
     width: 701px;
@@ -2387,17 +2535,21 @@ form {
   .wrapp_block_form {
     padding: 40px 0 0;
   }
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 419px;
     height: 382px;
     margin-bottom: 0;
+  }
+  .teacher_img_chan {
+    margin-bottom: 40px;
   }
   .wrapp_left_block_teacher > h2 {
     font-size: 46px;
     line-height: 1.62;
     margin-bottom: 25px;
   }
-  .wrapp_left_block_teacher > .name_teacher {
+  .wrapp_left_block_teacher > div > .name_teacher {
     font-size: 24px;
     line-height: 1.62;
     text-align: center;
@@ -2418,6 +2570,13 @@ form {
   }
   .about_teacher_wrapp {
     padding: 80px 0 40px;
+  }
+  .about_teacher_wrapp_training {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .about_teacher_wrapp_part {
+    padding-top: 40px;
   }
   .form_container {
     flex-direction: row;
@@ -2556,7 +2715,6 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
   }
   .info_block > p {
     text-align: left;
@@ -2604,9 +2762,6 @@ form {
     margin-bottom: 40px;
   }
 
-  .wrapp_main_text2 {
-    margin-bottom: 0;
-  }
   .education_title {
     margin: 0;
   }
@@ -2686,7 +2841,7 @@ form {
   animation-name: fadein;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
 }
 
@@ -2695,7 +2850,7 @@ form {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
-  animation-delay: 0.8s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
 
@@ -2704,7 +2859,7 @@ form {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
-  animation-delay: 1.6s;
+  animation-delay: 0.8s;
   animation-fill-mode: forwards;
 }
 
@@ -2713,7 +2868,7 @@ form {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
-  animation-delay: 2.4s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 .anim-fade-in > li:nth-child(5) {
@@ -2721,7 +2876,7 @@ form {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
-  animation-delay: 3.2s;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
 }
 
@@ -2730,6 +2885,6 @@ form {
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
-  animation-delay: 2.8s;
+  animation-delay: 1.4s;
   animation-fill-mode: forwards;
 }

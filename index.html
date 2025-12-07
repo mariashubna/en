@@ -96,7 +96,7 @@
             <li>
               <div id="btn_course" class="select_course" tabindex="0">
                 <div class="btn_cours">
-                  <p>Індивідуальна робота</p>
+                  <p>Індивідуальна підтримка</p>
                   <img
                     src="./img/arrowWhite.svg"
                     alt="arrow"
@@ -117,18 +117,24 @@
       </div>
     </header>
     <main class="main">
-      <section>
+      <section class="section_main">
         <div class="container main_container">
           <div class="container main_index">
-            <h1 class="wrapp_main_title">Простір розвитку “Енея”</h1>
-            <h2 class="wrapp_main_subtitle">
+            <h1 class="wrapp_main_title wrapp_main_title_index">
+              Простір розвитку “Енея”
+            </h1>
+            <h2 class="wrapp_main_subtitle wrapp_main_subtitle_index">
               Підтримуємо в непрості періоди життя
             </h2>
-            <p class="wrapp_main_text">
-              Цигун і Тайчі • Психологічна підтримка • Коучинг
-            </p>
+            <div class="main_container_lines">
+              <hr class="white_line" />
+              <p class="wrapp_main_text wrapp_main_text_index">
+                Цигун і Тайчі • Психологічна підтримка • Коучинг
+              </p>
+              <hr class="white_line" />
+            </div>
           </div>
-          <img
+          <!-- <img
             class="decoration_images_main"
             src="./img/decoration1.svg"
             alt="Тай Чі"
@@ -141,7 +147,7 @@
             alt="Тай Чі"
             width="51"
             height="152"
-          />
+          /> -->
         </div>
       </section>
 
@@ -156,16 +162,20 @@
                   Відеозаписи курсів з детальними розборами
                 </p>
               </div>
-              <a class="direction_list_item_link" href="#record">Перейти</a>
+              <a class="direction_list_item_link" href="#record"
+                >Переглянути курси</a
+              >
             </li>
             <li class="direction_list_item">
               <div>
                 <h3 class="direction_list_item_title">Регулярні події</h3>
                 <p class="direction_list_item_text">
-                  Цигун — марафони, семінари.
+                  Цигун-марафони, семінари, регулярні заняття
                 </p>
               </div>
-              <a class="direction_list_item_link" href="#regular">Перейти</a>
+              <a class="direction_list_item_link" href="#regular"
+                >Долучитися до подій</a
+              >
             </li>
             <li class="direction_list_item">
               <div>
@@ -173,10 +183,12 @@
                   Індивідуальна підтримка
                 </h3>
                 <p class="direction_list_item_text">
-                  Коучинг і психологічні консультації.
+                  Коучинг і психологічні консультації
                 </p>
               </div>
-              <a class="direction_list_item_link" href="#individual">Перейти</a>
+              <a class="direction_list_item_link" href="#individual"
+                >Дізнатися умови</a
+              >
             </li>
           </ul>
         </div>
@@ -186,6 +198,12 @@
         <div class="container">
           <div class="record-color">
             <h2 class="record_section_title">Курси в записі</h2>
+            <p class="regular_list_item_title">
+              Відеокурси в записі, з якими ви можете опановувати комплекси вправ
+              цигун і тайцзі у власному темпі, з будь-якого місця та в зручний
+              для себе час
+            </p>
+
             <ul class="record_list">
               <li class="record_list_item">
                 <h3 class="record_list_item_title">
@@ -242,7 +260,7 @@
           <ul class="regular_list">
             <li class="regular_list_item">
               <h3 class="regular_list_item_title">
-                Офлайн заняття тайчі на Русанівці
+                Заняття з тайчі м. Київ (Лівий берег)
               </h3>
               <div class="regular_sublist_wrap">
                 <ul class="regular_sublist_time">
@@ -253,13 +271,21 @@
                     <p>Сб - 9:00-10:30</p>
                   </li>
                 </ul>
-                <p class="regular_list_item_text">
+                <a
+                  class="regular_list_item_text"
+                  href="https://www.google.com/maps/search/?api=1&query=Київ,+Русанівська+набережна+12"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   м. Київ, Культурний кластер “Краків”, Русанівська набережна,
                   12
-                </p>
+                </a>
               </div>
               <p class="regular_list_item_text bond_regular_list">
                 Для новачків та тих, хто вже має досвід занять
+              </p>
+              <p class="regular_list_item_text bond_regular_list">
+                Можна приєднатися на будь якому етапі
               </p>
               <p class="regular_list_item_text">
                 <b>Викладач</b>: Олена Доброжанська
@@ -267,7 +293,7 @@
               <a
                 class="record_list_item_link"
                 href="./chan_mi_gong_training.html"
-                >Детальніше</a
+                >Дізнатися умови</a
               >
             </li>
 
@@ -297,7 +323,7 @@
                 <b>Викладач:</b> Олена Доброжанська
               </p>
               <a class="record_list_item_link" href="./qigong_marathon.html"
-                >Детальніше</a
+                >Дізнатися умови</a
               >
             </li>
 
@@ -319,7 +345,7 @@
               <a
                 class="record_list_item_link"
                 href="./chan_mi_gong_training.html"
-                >Детальніше</a
+                >Дізнатися умови</a
               >
             </li>
           </ul>
@@ -328,15 +354,19 @@
 
       <section class="individual" id="individual">
         <div class="container">
-          <h2 class="section_title">Індивідуальна робота</h2>
+          <h2 class="section_title">Індивідуальна підтримка</h2>
           <ul class="individual_list">
             <li class="individual_item">
               <div>
                 <div class="individual_wrap">
-                  <h3 class="individual_item_heading">
-                    Олена Доброжанська, практикуюча психологиня та
-                    психотерапевтка з понад 15-річним досвідом роботи.
-                  </h3>
+                  <div>
+                    <h3 class="individual_item_heading">Олена Доброжанська,</h3>
+                    <p class="individual_item_heading">
+                      практикуюча психологиня та психотерапевтка з понад
+                      15-річним досвідом роботи.
+                    </p>
+                  </div>
+
                   <picture>
                     <source srcset="./img/olena.webp" type="image/webp" />
                     <img
@@ -385,10 +415,16 @@
             <li class="individual_item">
               <div>
                 <div class="individual_wrap">
-                  <h3 class="individual_item_heading">
-                    Сергій Доброжанський, бізнес-коуч ECF з питань мотивації,
-                    M.A. NLP.
-                  </h3>
+                  <div>
+                    <h3 class="individual_item_heading">
+                      Сергій Доброжанський,
+                    </h3>
+                    <p class="individual_item_heading">
+                      консультант та коуч з питань мотивації, засновник
+                      мобільного додатку V-click.
+                    </p>
+                  </div>
+
                   <picture>
                     <source srcset="./img/sergii.webp" type="image/webp" />
                     <img
@@ -407,27 +443,20 @@
                   <ul class="individual_sublist">
                     <li class="individual_sublist_item_text">
                       <p>
-                        - відновлення мотивації власників, керівників,
-                        підприємців, стартаперів, коли те, що мотивувало раніше,
+                        - відновити мотивацію, коли те, що мотивувало раніше,
                         вже не дає енергії і сенсу;
                       </p>
                     </li>
                     <li class="individual_sublist_item_text">
                       <p>
-                        - збереження ключових працівників через управління
-                        індивідуальним мотиваційним профілем;
+                        - зберегти ключових працівників, з якими разом пройшли
+                        “і вогонь, і воду”;
                       </p>
                     </li>
                     <li class="individual_sublist_item_text">
                       <p>
-                        - розвиток компетенцій “Самомотивація” та “Мотивація
-                        працівників”;
-                      </p>
-                    </li>
-                    <li class="individual_sublist_item_text">
-                      <p>
-                        - “тасковий” коучинг - вирішення поточних робочих задач
-                        чи проблем.
+                        - зменшити плинність працівників в умовах кадрового
+                        голоду.
                       </p>
                     </li>
                   </ul>
