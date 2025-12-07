@@ -612,6 +612,12 @@
 .teacher_img {
   margin-bottom: 25px;
 }
+
+.teacher_img_chan {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  display: block;
+}
 .wrapp_left_block_teacher {
   max-width: 615px;
   width: 100%;
@@ -1881,6 +1887,9 @@ form {
 .tai_location_section {
   padding: 40px 60px 80px;
 }
+.tai_location_chan {
+  padding-bottom: 40px;
+}
 .tai_location_section a {
   height: 66px;
   width: 200px;
@@ -1931,7 +1940,8 @@ form {
 /* adapt */
 
 @media screen and (min-width: 386px) {
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 320px;
     height: auto;
   }
@@ -2229,11 +2239,13 @@ form {
   .about_teacher_wrapp_part {
     padding-top: 20px;
   }
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 419px;
     height: 382px;
     margin-bottom: 30px;
   }
+
   .wrapp_left_block_teacher > div > .name_teacher {
     font-size: 24px;
     line-height: 1.62;
@@ -2315,7 +2327,8 @@ form {
   .video_tai {
     height: 350px;
   }
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 519px;
     height: 470px;
   }
@@ -2522,10 +2535,14 @@ form {
   .wrapp_block_form {
     padding: 40px 0 0;
   }
-  .teacher_img {
+  .teacher_img,
+  .teacher_img_chan {
     width: 419px;
     height: 382px;
     margin-bottom: 0;
+  }
+  .teacher_img_chan {
+    margin-bottom: 40px;
   }
   .wrapp_left_block_teacher > h2 {
     font-size: 46px;
