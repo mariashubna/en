@@ -315,6 +315,11 @@
   text-align: center;
   letter-spacing: 0.03em;
 }
+
+.about_text_marathon {
+  margin: 0 auto;
+}
+
 .block_yin {
   display: flex;
   justify-content: space-between;
@@ -392,6 +397,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.consumer_list_participation {
+  margin-bottom: 40px;
+}
+.consumer_list_marathon {
+  margin-bottom: 40px;
 }
 
 .consumer_lesson {
@@ -503,10 +514,28 @@
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  width: max-content;
+  margin: 0 auto;
 }
+
+.wrapp_feedback_part {
+  margin-bottom: 40px;
+}
+
+.feedback_scroller {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.feedback_scroller::-webkit-scrollbar {
+  display: none;
+}
+
 .wrapp_feedback_center {
-  justify-content: center;
   cursor: unset;
+  margin-bottom: 40px;
 }
 .wrapp_feedback_items:active {
   cursor: grabbing;
@@ -570,6 +599,7 @@
   gap: 80px;
   padding: 15px 0;
 }
+
 .teacher_container {
   display: flex;
   flex-direction: column;
@@ -814,7 +844,6 @@ form {
   box-shadow: 0px 12px 24px 0px #818a8c;
 }
 .wrapp_main_text2 {
-  margin-bottom: 0;
   max-width: 60%;
   margin: 0 auto;
 }
@@ -2009,9 +2038,9 @@ form {
     line-height: 1.5;
   }
 
-  .wrapp_main_text2 {
+  /* .wrapp_main_text2 {
     margin-bottom: 0;
-  }
+  } */
 
   .right_block_form > h2 {
     font-size: 40px;
@@ -2103,6 +2132,11 @@ form {
     margin-bottom: 30px;
     width: 718px;
   }
+
+  .about_text_marathon2 {
+    margin-bottom: 0;
+  }
+
   .block_yin {
     gap: 80px;
     margin-bottom: 30px;
@@ -2191,6 +2225,9 @@ form {
   }
   .about_teacher_wrapp {
     padding: 20px 0;
+  }
+  .about_teacher_wrapp_part {
+    padding-top: 20px;
   }
   .teacher_img {
     width: 419px;
@@ -2330,6 +2367,11 @@ form {
     width: 1040px;
     margin-bottom: 40px;
   }
+
+  .about_text_marathon2 {
+    margin-bottom: 0;
+  }
+
   .block_yin {
     width: 906px;
     gap: unset;
@@ -2516,6 +2558,9 @@ form {
     padding-top: 40px;
     padding-bottom: 80px;
   }
+  .about_teacher_wrapp_part {
+    padding-top: 40px;
+  }
   .form_container {
     flex-direction: row;
     padding: 0;
@@ -2700,9 +2745,6 @@ form {
     margin-bottom: 40px;
   }
 
-  .wrapp_main_text2 {
-    margin-bottom: 0;
-  }
   .education_title {
     margin: 0;
   }
