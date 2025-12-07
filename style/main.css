@@ -1763,6 +1763,12 @@ form {
   line-height: 1.5;
   font-family: var(--second_font);
 }
+.tai_info_link {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+}
 .tai_info_title {
   margin-bottom: 0;
 }
@@ -1825,6 +1831,10 @@ form {
 .tai_price_section,
 .tai_time_section {
   position: relative;
+}
+
+.tai_loc_section {
+  padding-bottom: 40px;
 }
 .tai_location_section {
   padding: 40px 60px 80px;
