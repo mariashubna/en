@@ -1373,7 +1373,7 @@ form {
   position: absolute;
   z-index: 13;
   left: 74px;
-  bottom: 250px;
+  bottom: 400px;
   width: 96px;
   height: 96px;
 }
@@ -1418,7 +1418,7 @@ form {
   gap: 4px;
   align-items: flex-start;
   margin: 0 auto;
-  max-width: 450px;
+  max-width: 460px;
 }
 .regular_sublist_wrap {
   display: flex;
