@@ -39,6 +39,21 @@
 //   });
 // }
 
+const burger = document.querySelector(".burger");
+const navMob = document.querySelector(".nav_mob");
+
+burger.addEventListener("click", () => {
+  navMob.classList.toggle("active");
+  burger.classList.toggle("active");
+});
+
+document.querySelectorAll(".nav_mob a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMob.classList.remove("active");
+    burger.classList.remove("active");
+  });
+});
+
 const form = document.getElementById("form");
 
 if (form) {
