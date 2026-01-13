@@ -2783,10 +2783,22 @@ form {
     bottom: -40px;
     background: white;
   }
+  .right_block_form2 {
+    height: 510px;
+    padding-top: 80px;
+  }
+  .right_block_form3 {
+    height: 510px;
+    padding-top: 40px;
+  }
   #submit_form_btn {
     width: 206px;
     height: 66px;
     font-size: 20px;
+  }
+  #submit_form_btn.submit_form_btn {
+    width: 380px;
+    padding: 19px 32px;
   }
   .right_block_form > h2 {
     text-align: center;

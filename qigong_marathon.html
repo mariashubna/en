@@ -173,12 +173,7 @@
                 Всього 15 хвилин на день допомагає знизити стрес, розімʼяти все
                 тіло та відчути внутрішню рівновагу та опору.
               </p>
-              <a
-                href="http://t.me/dobrozhanskyi_coach"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="telegram_btn_marathon"
-              >
+              <a href="#formSection" class="telegram_btn_marathon">
                 Записатися на наступний марафон
               </a>
             </div>
@@ -247,12 +242,7 @@
               <p>Після оплати ви отримаєте посилання на телеграм-канал.</p>
             </li>
           </ul>
-          <a
-            href="http://t.me/dobrozhanskyi_coach"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="telegram_btn_marathon"
-          >
+          <a href="#formSection" class="telegram_btn_marathon">
             Записатися на наступний марафон
           </a>
         </div>
@@ -378,14 +368,79 @@
               </li>
             </ul>
           </div>
-          <a
-            href="http://t.me/dobrozhanskyi_coach"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="telegram_btn_marathon"
-          >
-            Записатися на наступний марафон
-          </a>
+        </div>
+      </section>
+
+      <section class="wrapp_block_form" id="formSection">
+        <div class="container form_container">
+          <div class="right_block_form right_block_form3">
+            <h2>
+              Ви всього за 1 крок до того, щоб почати формувати нову корисну
+              звичку
+            </h2>
+            <p class="form_info">
+              Залиште ваші контакти у формі і ми напишемо вам, щоб уточнити ваші
+              побажання щодо участі
+            </p>
+          </div>
+          <div class="left_block_form">
+            <form
+              class="form"
+              id="formInfo"
+              action="https://script.google.com/macros/s/AKfycbx0uh9F9ytuMHu6w3QAlTD1z7FN2o2LRZOQUVtCIdLQ0_JohaNjhZLiZQepNHk_L8JrRA/exec"
+              method="POST"
+            >
+              <div>
+                <label class="label" for="name">Введіть імʼя</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Імʼя"
+                  required
+                />
+              </div>
+              <div class="block_number">
+                <label class="label" for="phone_region" id="phone_region_label"
+                  >Оберіть код країни</label
+                >
+                <select
+                  name="phone_region"
+                  id="phone_region"
+                  aria-labelledby="phone_region_label"
+                >
+                  <option value="UA +380">UA +380</option>
+                </select>
+                <label class="label" for="phone">Введіть номер телефону</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Номер телефону"
+                  required
+                />
+              </div>
+              <label class="label" for="email">Введіть електрону пошту</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Введіть ел. пошту тут"
+                required
+              />
+              <input type="hidden" name="course" value="Марафон" />
+              <button class="submit_form_btn" id="submit_form_btn">
+                Зареєструватися на марафон
+              </button>
+            </form>
+          </div>
+          <img
+            class="last_right_deko last_right_second"
+            src="./img/last_right_deko.svg"
+            alt="Тай Чі"
+            width="73"
+            height="208"
+          />
         </div>
       </section>
     </main>

@@ -54,18 +54,40 @@ document.querySelectorAll(".nav_mob a").forEach((link) => {
   });
 });
 
+// Перехват форми на сповіщення
+
+const formInfo = document.getElementById("formInfo");
+
+formInfo.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(formInfo);
+
+  try {
+    await fetch(formInfo.action, {
+      method: "POST",
+      body: formData,
+    });
+
+    alert("Дякуємо за реєстрацію! Ми напишемо вам у найближчий час.");
+    formInfo.reset();
+  } catch (error) {
+    alert("Сталася помилка. Спробуйте ще раз.");
+  }
+});
+
 const form = document.getElementById("form");
 
 if (form) {
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // зупиняємо стандартну відправку
+    e.preventDefault();
 
     const formData = new FormData(form);
 
     try {
       const res = await fetch(form.action, {
         method: "POST",
-        body: formData, // надсилаємо як FormData, не URLSearchParams
+        body: formData,
       });
 
       const result = await res.json();
