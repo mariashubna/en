@@ -42,10 +42,12 @@
 const burger = document.querySelector(".burger");
 const navMob = document.querySelector(".nav_mob");
 
-burger.addEventListener("click", () => {
-  navMob.classList.toggle("active");
-  burger.classList.toggle("active");
-});
+if (burger && navMob) {
+  burger.addEventListener("click", () => {
+    navMob.classList.toggle("active");
+    burger.classList.toggle("active");
+  });
+}
 
 document.querySelectorAll(".nav_mob a").forEach((link) => {
   link.addEventListener("click", () => {
@@ -58,23 +60,25 @@ document.querySelectorAll(".nav_mob a").forEach((link) => {
 
 const formInfo = document.getElementById("formInfo");
 
-formInfo.addEventListener("submit", async function (e) {
-  e.preventDefault();
+if (formInfo) {
+  formInfo.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  const formData = new FormData(formInfo);
+    const formData = new FormData(formInfo);
 
-  try {
-    await fetch(formInfo.action, {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      await fetch(formInfo.action, {
+        method: "POST",
+        body: formData,
+      });
 
-    alert("Дякуємо за реєстрацію! Ми напишемо вам у найближчий час.");
-    formInfo.reset();
-  } catch (error) {
-    alert("Сталася помилка. Спробуйте ще раз.");
-  }
-});
+      alert("Дякуємо за реєстрацію! Ми напишемо вам у найближчий час.");
+      formInfo.reset();
+    } catch (error) {
+      alert("Сталася помилка. Спробуйте ще раз.");
+    }
+  });
+}
 
 const form = document.getElementById("form");
 
@@ -401,7 +405,9 @@ function handleKeydown(event) {
   }
 }
 
-btnCourse.addEventListener("keydown", handleKeydown);
+if (btnCourse) {
+  btnCourse.addEventListener("keydown", handleKeydown);
+}
 
 // Плавне переміщення за посиланням по сторінці
 document.querySelectorAll('a[href^="#"]').forEach((link) => {

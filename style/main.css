@@ -282,7 +282,7 @@
 
 .block_align {
   text-align: center;
-  max-width: 620px;
+  /* max-width: 620px; */
   width: 100%;
   margin: 0 auto;
 }
@@ -381,6 +381,7 @@
   font-size: 32px;
   line-height: 1.22;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 30px;
   max-width: 598px;
 }
@@ -390,6 +391,8 @@
   font-size: 32px;
   line-height: 1.22;
   text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 .about_text {
   font-family: var(--second_font);
@@ -550,6 +553,7 @@
   align-items: center;
 }
 .decoration_blue_image {
+  display: none;
   position: absolute;
   z-index: -2;
   left: -55px;
@@ -559,6 +563,7 @@
   clip-path: polygon(55px 0, 100% 0, 100% 100%, 55px 100%);
 }
 .decoration_orange_image {
+  display: none;
   position: absolute;
   z-index: -1;
   left: 34px;
@@ -701,6 +706,8 @@
   margin: 0 auto;
   margin-bottom: 25px;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .wrapp_left_block_teacher {
   max-width: 615px;
@@ -926,16 +933,24 @@ form {
   background-color: transparent;
 }
 
+#submit_form_btn.submit_form_btn {
+  width: 380px;
+  max-width: 100%;
+  padding: 19px 12px;
+}
+
 /* marathon */
 .marathom_img {
-  height: 400px;
+  height: auto;
   margin-bottom: 40px;
   border-radius: 20px;
   box-shadow: 0px 12px 24px 0px #818a8c;
+  max-width: 100%;
 }
 .wrapp_main_text2 {
-  max-width: 60%;
+  max-width: 100%;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 .marathon_text {
   margin-bottom: 40px;
@@ -1074,8 +1089,8 @@ form {
 /* page 2 */
 .hero-small-photo,
 .hero-photo-small {
-  max-width: unset;
-  height: 300px;
+  max-width: 100%;
+  height: auto;
   width: auto;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -1273,6 +1288,7 @@ form {
 }
 
 .decoration_images_main {
+  display: none;
   position: absolute;
   z-index: -1;
   left: -50px;
@@ -1623,6 +1639,7 @@ form {
   padding: 40px;
   gap: 50px;
   align-items: center;
+  flex-direction: column;
 }
 .psychology_wrap::before,
 .coach_wrap::before,
@@ -1666,6 +1683,7 @@ form {
   left: 0;
   top: -70px;
   z-index: 5;
+  display: none;
 }
 .education {
   padding: 40px 0;
@@ -1677,6 +1695,7 @@ form {
   z-index: 5;
   width: 124px;
   height: 402px;
+  display: none;
 }
 .education_container {
   font-size: 40px;
@@ -1763,6 +1782,9 @@ form {
   justify-content: center;
   display: flex;
   transition: opacity 0.8s ease, transform 0.8s ease;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
 }
 
 .psychology_list > li {
@@ -1814,6 +1836,7 @@ form {
   color: #fff;
   margin: 0 auto;
   font-weight: 700;
+  max-width: 100%;
 }
 .telegram_btn_marathon {
   height: 88px;
@@ -1882,7 +1905,7 @@ form {
 }
 .tai_text p,
 .chan_text p {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.5;
   font-family: var(--second_font);
   font-weight: 500;
@@ -1916,7 +1939,7 @@ form {
 }
 
 .tai_info_time {
-  width: 1115px;
+  width: 100%;
   gap: 30px;
   margin: 0 auto;
   margin-bottom: 40px;
@@ -1924,6 +1947,10 @@ form {
   justify-content: center;
   display: flex;
   transition: opacity 0.8s ease, transform 0.8s ease;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .tai_info_time li.show {
@@ -1977,7 +2004,7 @@ form {
   padding-bottom: 40px;
 }
 .tai_location_section {
-  padding: 40px 60px 80px;
+  padding: 40px 10px 80px;
 }
 .tai_location_chan {
   padding-bottom: 40px;
@@ -1996,10 +2023,12 @@ form {
 .decoration_blue_tai {
   position: absolute;
   left: 0;
+  display: none;
 }
 .decoration_orange_tai {
   position: absolute;
   left: 80px;
+  display: none;
 }
 /* chan */
 .chan_section {
@@ -2018,10 +2047,11 @@ form {
 }
 .chan_img {
   width: 500px;
+  max-width: 100%;
 }
 .chan_wrap {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .chan_foundation_wrap p {
   text-align: center;
@@ -2043,6 +2073,9 @@ form {
 }
 
 @media screen and (min-width: 430px) {
+  .marathom_img {
+    height: 400px;
+  }
   form {
     width: 380px;
   }
@@ -2104,6 +2137,19 @@ form {
   }
 }
 @media screen and (min-width: 834px) {
+  .decoration_img_psyh {
+    display: unset;
+  }
+  .tai_text p,
+  .chan_text p {
+    font-size: 28px;
+  }
+  .tai_location_section {
+    padding: 40px 60px 80px;
+  }
+  .decoration_images_main {
+    display: unset;
+  }
   .hero {
     padding: 0 10px 20px 10px;
   }
@@ -2137,6 +2183,9 @@ form {
 
   .record_list_item {
     width: 40%;
+  }
+  .decoration_right_psyh {
+    display: unset;
   }
 
   .regular_sublist_time {
@@ -2340,6 +2389,7 @@ form {
     line-height: 1.5;
   }
   .decoration_blue_image {
+    display: unset;
     left: -80px;
     top: -210px;
     width: 288px;
@@ -2347,6 +2397,7 @@ form {
     clip-path: polygon(80px 0, 100% 0, 100% 100%, 80px 100%);
   }
   .decoration_orange_image {
+    display: unset;
     width: 123px;
     height: 123px;
     top: -40px;
@@ -2472,6 +2523,23 @@ form {
   .tai_info_title {
     margin-bottom: 0;
   }
+  .tai_info_time {
+    flex-direction: row;
+    width: 1115px;
+  }
+  .decoration_blue_tai {
+    display: unset;
+  }
+  .decoration_orange_tai {
+    display: unset;
+  }
+  .block_align {
+    max-width: 750px;
+  }
+  .chan_wrap {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -2490,6 +2558,9 @@ form {
   .direction_list_item {
     height: 248px;
   }
+  .psychology_list {
+    flex-direction: row;
+  }
 }
 @media screen and (min-width: 1040px) {
   .nav_mob {
@@ -2505,6 +2576,16 @@ form {
   }
 }
 @media screen and (min-width: 1280px) {
+  .psychology_wrap,
+  .coach_wrap,
+  .tai_wrap,
+  .tai_location_wrap,
+  .chan_wrap {
+    flex-direction: row;
+  }
+  .wrapp_main_text2 {
+    max-width: 60%;
+  }
   .header {
     padding: 10px 0;
   }
@@ -2623,6 +2704,10 @@ form {
   .video_second {
     height: 270px;
     margin-bottom: 40px;
+  }
+  .hero-small-photo,
+  .hero-photo-small {
+    height: 300px;
   }
   .form_info {
     font-size: 20px;
@@ -2797,7 +2882,6 @@ form {
     font-size: 20px;
   }
   #submit_form_btn.submit_form_btn {
-    width: 380px;
     padding: 19px 32px;
   }
   .right_block_form > h2 {
