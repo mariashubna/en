@@ -106,6 +106,36 @@ if (form) {
   });
 }
 
+const form2 = document.getElementById("form2");
+
+if (form2) {
+  form2.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form2);
+
+    try {
+      const res = await fetch(form2.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await res.json();
+      console.log("Server response:", result);
+
+      if (result.result === "Success") {
+        // редирект на сторінку оплати
+        window.location.href = "https://prt.mn/DC82FfqAwSt";
+      } else {
+        alert("Сталася помилка при відправці форми");
+      }
+    } catch (err) {
+      console.error("Помилка при відправці:", err);
+      alert("Помилка при відправці форми. Спробуйте ще раз.");
+    }
+  });
+}
+
 $(".buy_course_btn").on("click", function (e) {
   e.preventDefault();
 
