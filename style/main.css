@@ -1750,6 +1750,9 @@ form {
   align-items: center;
   flex-direction: column;
 }
+.tai_wrap {
+  padding: 60px 20px;
+}
 .psychology_wrap::before,
 .coach_wrap::before,
 .tai_wrap::before,
@@ -2003,7 +2006,7 @@ form {
 
 /* tai_chi */
 .tai_container {
-  padding: 0 40px;
+  padding: 0 10px;
 }
 .tai_wrap,
 .chan_wrap {
@@ -2252,6 +2255,9 @@ form {
   }
 }
 @media screen and (min-width: 834px) {
+  .tai_container {
+    padding: 0 40px;
+  }
   .coach_wrap {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -2667,6 +2673,9 @@ form {
   .chan_wrap {
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+  .tai_wrap {
+    padding: 40px;
   }
 }
 
