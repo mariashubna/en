@@ -56,15 +56,19 @@ document.querySelectorAll(".nav_mob a").forEach((link) => {
   });
 });
 
-// Перехват форми на сповіщення
+// // Перехват форми на сповіщення
 
 const formInfo = document.getElementById("formInfo");
+const modal = document.getElementById("successModal");
+const submitBtn = document.getElementById("submit_form_btn");
 
-if (formInfo) {
+if (formInfo && modal && submitBtn) {
   formInfo.addEventListener("submit", async function (e) {
     e.preventDefault();
 
     const formData = new FormData(formInfo);
+
+    submitBtn.classList.add("loading");
 
     try {
       await fetch(formInfo.action, {
@@ -72,13 +76,51 @@ if (formInfo) {
         body: formData,
       });
 
-      alert("Дякуємо за реєстрацію! Ми напишемо вам у найближчий час.");
       formInfo.reset();
+      openModal();
     } catch (error) {
       alert("Сталася помилка. Спробуйте ще раз.");
+    } finally {
+      submitBtn.classList.remove("loading");
     }
   });
+
+  function openModal() {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  modal.querySelector(".modal_overlay")?.addEventListener("click", closeModal);
+  modal.querySelector(".modal_close")?.addEventListener("click", closeModal);
+  modal.querySelector(".modal_btn")?.addEventListener("click", closeModal);
 }
+
+// const formInfo = document.getElementById("formInfo");
+
+// if (formInfo) {
+//   formInfo.addEventListener("submit", async function (e) {
+//     e.preventDefault();
+
+//     const formData = new FormData(formInfo);
+
+//     try {
+//       await fetch(formInfo.action, {
+//         method: "POST",
+//         body: formData,
+//       });
+
+//       alert("Дякуємо за реєстрацію! Ми напишемо вам у найближчий час.");
+//       formInfo.reset();
+//     } catch (error) {
+//       alert("Сталася помилка. Спробуйте ще раз.");
+//     }
+//   });
+// }
 
 const form = document.getElementById("form");
 

@@ -7,6 +7,92 @@
   }
 }
 
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal_content {
+  position: relative;
+  background: #fff;
+  max-width: 400px;
+  width: 90%;
+  padding: 52px 24px 32px;
+  border-radius: 16px;
+  text-align: center;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal_content h3 {
+  margin-bottom: 12px;
+}
+
+.modal_content p {
+  margin-bottom: 20px;
+}
+
+.modal_btn {
+  cursor: pointer;
+  width: 180px;
+  font-size: 20px;
+  line-height: 1.2;
+  display: block;
+  text-decoration: none;
+  background-image: var(--btn_background_color);
+  background-color: #0070aa;
+  border: solid 2px transparent;
+  border-radius: 33px;
+  padding: 17px 24px;
+  font-family: var(--second_font);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: 700;
+  max-width: 100%;
+}
+
+.modal_btn:hover,
+.modal_btn:focus {
+  color: black;
+  border: solid 2px #002c43;
+  background-image: none;
+  background-color: transparent;
+}
+.modal_close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 /* Header */
 .header {
   padding: 10px 0 8px;
@@ -241,7 +327,7 @@
 .wrapp_main_title {
   font-family: var(--main_font);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.41;
   letter-spacing: -0.03em;
   text-align: center;
@@ -934,11 +1020,34 @@ form {
 }
 
 #submit_form_btn.submit_form_btn {
+  position: relative;
+  overflow: hidden;
   width: 380px;
   max-width: 100%;
   padding: 19px 12px;
 }
 
+#submit_form_btn.submit_form_btn.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+#submit_form_btn.submit_form_btn.loading::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-top-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 0.8s linear infinite;
+}
+#submit_form_btn.submit_form_btn.loading span {
+  visibility: hidden;
+}
 /* marathon */
 .marathom_img {
   height: auto;
@@ -1669,6 +1778,7 @@ form {
 .chan_img {
   border-radius: 20px;
   box-shadow: 0px 12px 24px 0px #818a8c;
+  max-width: 100%;
 }
 .request,
 .approach {
@@ -1690,8 +1800,8 @@ form {
 }
 .decoration_right_psyh {
   position: absolute;
-  right: -25px;
-  top: -180px;
+  right: 0;
+  top: -110px;
   z-index: 5;
   width: 124px;
   height: 402px;
@@ -1721,6 +1831,7 @@ form {
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  max-width: 100%;
 }
 .education_item {
   animation-name: fadein;
@@ -1730,7 +1841,7 @@ form {
   animation-fill-mode: forwards;
   max-height: 480px;
   width: 400px;
-  padding: 45px;
+  padding: 15px;
   display: block;
   flex: 0 0 auto;
   background-color: #002c43d9;
@@ -1739,6 +1850,7 @@ form {
   display: flex;
   align-items: center;
   text-align: center;
+  max-width: 90%;
 }
 .education_title {
   margin: 0;
@@ -1756,6 +1868,8 @@ form {
 .education_center {
   margin: 0 auto;
   cursor: unset;
+  flex-direction: column;
+  align-items: center;
 }
 .approach {
   padding: 40px 0;
@@ -1799,6 +1913,7 @@ form {
   display: flex;
   align-items: center;
   padding: 8px;
+  height: 78px;
 }
 
 .psychology_list > li > p {
@@ -1872,8 +1987,8 @@ form {
 }
 
 .coach_wrap {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .coach {
   padding: 80px 0 40px;
@@ -2137,7 +2252,20 @@ form {
   }
 }
 @media screen and (min-width: 834px) {
+  .coach_wrap {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .education_item {
+    padding: 35px;
+    height: 210px;
+    width: 380px;
+  }
+  .education_center {
+    flex-direction: row;
+  }
   .decoration_img_psyh {
+    top: -100px;
     display: unset;
   }
   .tai_text p,
@@ -2543,6 +2671,10 @@ form {
 }
 
 @media screen and (min-width: 950px) {
+  .decoration_right_psyh {
+    top: -180px;
+  }
+
   .video_tai {
     height: 350px;
   }
@@ -2576,6 +2708,15 @@ form {
   }
 }
 @media screen and (min-width: 1280px) {
+  .psychology_title {
+    width: 1390px;
+  }
+  .wrapp_main_title {
+    margin-bottom: 0;
+  }
+  .psychology_wrap {
+    height: 613px;
+  }
   .psychology_wrap,
   .coach_wrap,
   .tai_wrap,
