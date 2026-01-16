@@ -49,7 +49,7 @@
           <a href="/">Головна</a>
           <ul class="nav_list">
             <li>
-              <div id="btn_course" class="select_course" tabindex="0">
+              <div class="select_course" tabindex="0">
                 <div class="btn_cours">
                   <p>Курси в записі</p>
                   <img
@@ -66,7 +66,7 @@
               </div>
             </li>
             <li>
-              <div id="btn_course" class="select_course" tabindex="0">
+              <div class="select_course" tabindex="0">
                 <div class="btn_cours">
                   <p>Регулярні події</p>
                   <img
@@ -94,9 +94,9 @@
               </div>
             </li>
             <li>
-              <div id="btn_course" class="select_course" tabindex="0">
+              <div class="select_course" tabindex="0">
                 <div class="btn_cours">
-                  <p>Індивідуальна робота</p>
+                  <p>Індивідуальна підтримка</p>
                   <img
                     src="./img/arrowWhite.svg"
                     alt="arrow"
@@ -114,6 +114,52 @@
             </li>
           </ul>
         </nav>
+        <nav class="nav_mob">
+          <a href="/">Головна</a>
+          <ul>
+            <li>
+              <p class="nav_mob_block">Курси в записі</p>
+
+              <ul>
+                <li><a href="./qigong.html">Цигун "Ба Дуань Цзінь"</a></li>
+                <li><a href="./tai_chi.html">Тай Чі "Па Фа У Бу"</a></li>
+              </ul>
+            </li>
+            <li>
+              <p class="nav_mob_block">Регулярні події</p>
+
+              <ul>
+                <li>
+                  <a href="./tai_chi_training.html">Заняття з тай чі</a>
+                </li>
+                <li>
+                  <a href="./qigong_marathon.html"
+                    >Онлайн-марафон цигун 21 день</a
+                  >
+                </li>
+                <li>
+                  <a href="./chan_mi_gong_training.html"
+                    >Навчання з цигун Чань Мі Гун</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="nav_mob_block">Індивідуальна підтримка</p>
+              <ul>
+                <li>
+                  <a href="./psychology.html">Психологічні консультації</a>
+                </li>
+                <li><a href="./coaching.html">Коучинг</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="burger" aria-label="Відкрити меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
     <main class="main">
@@ -234,14 +280,7 @@
             Чань Мі Гун, психолог, засновниця Простору Енея. Цигун викладає з
             2016 року.
           </p>
-          <a
-            href="http://t.me/dobrozhanskyi_coach"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="telegram_btn_marathon"
-          >
-            Записатися
-          </a>
+          <a href="#formSection" class="telegram_btn_marathon"> Записатися </a>
         </div>
       </section>
 
@@ -283,13 +322,76 @@
               </li>
             </ul>
           </div>
-          <a
-            class="telegram_btn"
-            href="https://t.me/dobrozhanska"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Записатися на семінар</a
-          >
+        </div>
+      </section>
+
+      <section class="wrapp_block_form" id="formSection">
+        <div class="container form_container">
+          <div class="right_block_form right_block_form3">
+            <h2>Ви всього за 1 крок до вивчення себе за допомогою цигун</h2>
+            <p class="form_info">
+              Залиште ваші контакти у формі і ми напишемо вам, щоб уточнити ваші
+              побажання щодо участі
+            </p>
+          </div>
+          <div class="left_block_form">
+            <form
+              class="form"
+              id="formInfo"
+              action="https://script.google.com/macros/s/AKfycbx0uh9F9ytuMHu6w3QAlTD1z7FN2o2LRZOQUVtCIdLQ0_JohaNjhZLiZQepNHk_L8JrRA/exec"
+              method="POST"
+            >
+              <div>
+                <label class="label" for="name">Введіть імʼя</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Імʼя"
+                  required
+                />
+              </div>
+              <div class="block_number">
+                <label class="label" for="phone_region" id="phone_region_label"
+                  >Оберіть код країни</label
+                >
+                <select
+                  name="phone_region"
+                  id="phone_region"
+                  aria-labelledby="phone_region_label"
+                >
+                  <option value="UA +380">UA +380</option>
+                </select>
+                <label class="label" for="phone">Введіть номер телефону</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Номер телефону"
+                  required
+                />
+              </div>
+              <label class="label" for="email">Введіть електрону пошту</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Введіть ел. пошту тут"
+                required
+              />
+              <input type="hidden" name="course" value="Чань Мі Гун" />
+              <button class="submit_form_btn" id="submit_form_btn">
+                <span> Зареєструватися на семінар</span>
+              </button>
+            </form>
+          </div>
+          <img
+            class="last_right_deko last_right_second"
+            src="./img/last_right_deko.svg"
+            alt="Тай Чі"
+            width="73"
+            height="208"
+          />
         </div>
       </section>
     </main>
@@ -1071,6 +1173,16 @@
       </div>
       <div id="overlay_two" class="overlay"></div>
     </footer>
+
+    <div class="modal" id="successModal" aria-hidden="true">
+      <div class="modal_overlay"></div>
+      <div class="modal_content">
+        <button class="modal_close" aria-label="Закрити">&times;</button>
+        <h3>Дякуємо за реєстрацію 🙌</h3>
+        <p>Ми напишемо вам у найближчий час.</p>
+        <button class="modal_btn">Добре</button>
+      </div>
+    </div>
 
     <script src="./js/jquery.js"></script>
     <script src="./js/main.js"></script>

@@ -39,18 +39,101 @@
 //   });
 // }
 
+const burger = document.querySelector(".burger");
+const navMob = document.querySelector(".nav_mob");
+
+if (burger && navMob) {
+  burger.addEventListener("click", () => {
+    navMob.classList.toggle("active");
+    burger.classList.toggle("active");
+  });
+}
+
+document.querySelectorAll(".nav_mob a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMob.classList.remove("active");
+    burger.classList.remove("active");
+  });
+});
+
+// // Перехват форми на сповіщення
+
+const formInfo = document.getElementById("formInfo");
+const modal = document.getElementById("successModal");
+const submitBtn = document.getElementById("submit_form_btn");
+
+if (formInfo && modal && submitBtn) {
+  formInfo.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(formInfo);
+
+    submitBtn.classList.add("loading");
+
+    try {
+      await fetch(formInfo.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      formInfo.reset();
+      openModal();
+    } catch (error) {
+      alert("Сталася помилка. Спробуйте ще раз.");
+    } finally {
+      submitBtn.classList.remove("loading");
+    }
+  });
+
+  function openModal() {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  modal.querySelector(".modal_overlay")?.addEventListener("click", closeModal);
+  modal.querySelector(".modal_close")?.addEventListener("click", closeModal);
+  modal.querySelector(".modal_btn")?.addEventListener("click", closeModal);
+}
+
+// const formInfo = document.getElementById("formInfo");
+
+// if (formInfo) {
+//   formInfo.addEventListener("submit", async function (e) {
+//     e.preventDefault();
+
+//     const formData = new FormData(formInfo);
+
+//     try {
+//       await fetch(formInfo.action, {
+//         method: "POST",
+//         body: formData,
+//       });
+
+//       alert("Дякуємо за реєстрацію! Ми напишемо вам у найближчий час.");
+//       formInfo.reset();
+//     } catch (error) {
+//       alert("Сталася помилка. Спробуйте ще раз.");
+//     }
+//   });
+// }
+
 const form = document.getElementById("form");
 
 if (form) {
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // зупиняємо стандартну відправку
+    e.preventDefault();
 
     const formData = new FormData(form);
 
     try {
       const res = await fetch(form.action, {
         method: "POST",
-        body: formData, // надсилаємо як FormData, не URLSearchParams
+        body: formData,
       });
 
       const result = await res.json();
@@ -59,6 +142,36 @@ if (form) {
       if (result.result === "Success") {
         // редирект на сторінку оплати
         window.location.href = "https://prt.mn/TEY37tjI2";
+      } else {
+        alert("Сталася помилка при відправці форми");
+      }
+    } catch (err) {
+      console.error("Помилка при відправці:", err);
+      alert("Помилка при відправці форми. Спробуйте ще раз.");
+    }
+  });
+}
+
+const form2 = document.getElementById("form2");
+
+if (form2) {
+  form2.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form2);
+
+    try {
+      const res = await fetch(form2.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await res.json();
+      console.log("Server response:", result);
+
+      if (result.result === "Success") {
+        // редирект на сторінку оплати
+        window.location.href = "https://prt.mn/DC82FfqAwSt";
       } else {
         alert("Сталася помилка при відправці форми");
       }
@@ -94,19 +207,40 @@ $(".buy_course_btn").on("click", function (e) {
 // $(window).on("pageshow", function (event) {
 //   $(".drop_list").hide();
 // });
+$(document).ready(function () {
+  // Клик по кнопке селекта
+  $(".select_course .btn_cours").on("click", function (e) {
+    e.stopPropagation();
 
-$(".select_course .btn_cours").on("click", function () {
-  let dropList = $(this).siblings(".drop_list");
+    const dropList = $(this).siblings(".drop_list");
 
-  // закрыть другие
-  $(".drop_list").not(dropList).fadeOut("fast").removeClass("flex");
+    // закрыть все остальные
+    $(".drop_list").not(dropList).fadeOut("fast").removeClass("flex");
 
-  // открыть текущее
-  if (dropList.is(":visible")) {
-    dropList.fadeOut("fast").removeClass("flex");
-  } else {
-    dropList.addClass("flex").hide().fadeIn("fast");
-  }
+    // переключить текущее
+    if (dropList.is(":visible")) {
+      dropList.fadeOut("fast").removeClass("flex");
+    } else {
+      dropList.addClass("flex").hide().fadeIn("fast");
+    }
+  });
+
+  // Клик внутри селекта (чтобы не закрывался)
+  $(".select_course").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  // Клик ВНЕ селекта — закрыть всё
+  $(document).on("click", function () {
+    $(".drop_list").fadeOut("fast").removeClass("flex");
+  });
+
+  // Закрытие по Escape
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") {
+      $(".drop_list").fadeOut("fast").removeClass("flex");
+    }
+  });
 });
 
 $("#offerta").on("click", function () {
@@ -334,7 +468,9 @@ function handleKeydown(event) {
   }
 }
 
-btnCourse.addEventListener("keydown", handleKeydown);
+if (btnCourse) {
+  btnCourse.addEventListener("keydown", handleKeydown);
+}
 
 // Плавне переміщення за посиланням по сторінці
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
