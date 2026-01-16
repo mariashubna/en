@@ -49,12 +49,14 @@ if (burger && navMob) {
   });
 }
 
-document.querySelectorAll(".nav_mob a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navMob.classList.remove("active");
-    burger.classList.remove("active");
+if (navMob && burger) {
+  navMob.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMob.classList.remove("active");
+      burger.classList.remove("active");
+    });
   });
-});
+}
 
 // // Перехват форми на сповіщення
 
@@ -135,6 +137,8 @@ if (form) {
         method: "POST",
         body: formData,
       });
+
+      if (!res.ok) throw new Error("Network error");
 
       const result = await res.json();
       console.log("Server response:", result);
@@ -385,6 +389,7 @@ window.addEventListener("scroll", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".tai_info_time li");
+  if (!items.length) return;
 
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -432,6 +437,8 @@ document.querySelectorAll(".lazy-video").forEach((video) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const section = document.querySelector(".psycholog_contact");
+  if (!section) return;
+
   const listItems = document.querySelectorAll(".psychology_list li");
   const button = document.querySelector(".telegram_btn");
 
