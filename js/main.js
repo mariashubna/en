@@ -207,19 +207,40 @@ $(".buy_course_btn").on("click", function (e) {
 // $(window).on("pageshow", function (event) {
 //   $(".drop_list").hide();
 // });
+$(document).ready(function () {
+  // Клик по кнопке селекта
+  $(".select_course .btn_cours").on("click", function (e) {
+    e.stopPropagation();
 
-$(".select_course .btn_cours").on("click", function () {
-  let dropList = $(this).siblings(".drop_list");
+    const dropList = $(this).siblings(".drop_list");
 
-  // закрыть другие
-  $(".drop_list").not(dropList).fadeOut("fast").removeClass("flex");
+    // закрыть все остальные
+    $(".drop_list").not(dropList).fadeOut("fast").removeClass("flex");
 
-  // открыть текущее
-  if (dropList.is(":visible")) {
-    dropList.fadeOut("fast").removeClass("flex");
-  } else {
-    dropList.addClass("flex").hide().fadeIn("fast");
-  }
+    // переключить текущее
+    if (dropList.is(":visible")) {
+      dropList.fadeOut("fast").removeClass("flex");
+    } else {
+      dropList.addClass("flex").hide().fadeIn("fast");
+    }
+  });
+
+  // Клик внутри селекта (чтобы не закрывался)
+  $(".select_course").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  // Клик ВНЕ селекта — закрыть всё
+  $(document).on("click", function () {
+    $(".drop_list").fadeOut("fast").removeClass("flex");
+  });
+
+  // Закрытие по Escape
+  $(document).on("keydown", function (e) {
+    if (e.key === "Escape") {
+      $(".drop_list").fadeOut("fast").removeClass("flex");
+    }
+  });
 });
 
 $("#offerta").on("click", function () {
