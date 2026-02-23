@@ -2849,7 +2849,7 @@ form {
     padding-bottom: 40px;
   }
   .regular_sublist_index {
-    max-width: 600px;
+    max-width: unset;
     width: auto;
   }
 }
@@ -3407,6 +3407,7 @@ form {
     line-height: 1.5;
     /* width: 701px; */
   }
+
   .regular_list_item_index {
     max-width: unset;
     font-size: 20px;
@@ -3415,6 +3416,9 @@ form {
   }
   .regular_list_item_index2 {
     width: 400px;
+  }
+  regular_list_item_index3 {
+    width: 500px;
   }
 }
 
