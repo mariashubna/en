@@ -612,7 +612,8 @@
   text-align: center;
 } */
 .item_consumer_text > p,
-.block_yin_item > p {
+.block_yin_item > p,
+.coach_item_text {
   font-family: var(--second_font);
   color: #25282d;
   font-weight: 400;
@@ -1427,12 +1428,13 @@ form {
   margin-bottom: 0;
 }
 .direction {
-  padding: 40px 0;
+  padding: 80px 0 40px;
 }
 .direction_list {
   display: flex;
   gap: 10px;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .direction_list_item {
@@ -1449,17 +1451,21 @@ form {
   text-align: center;
   line-height: 1.5;
   justify-content: space-between;
+  height: 100%;
 }
 .direction_list_item div {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .direction_list_item_title {
   font-size: 24px;
+  line-height: 1.25;
 }
 .direction_list_item_text {
   font-size: 20px;
+  line-height: 1.4;
 }
 .direction_list_item_link {
   width: 100%;
@@ -1468,9 +1474,11 @@ form {
   justify-content: center;
   font-size: 20px;
   line-height: 1.2;
-  border: solid 2px transparent;
-  border-color: white;
-  background-color: transparent;
+  /* border: solid 2px transparent;
+  border-color: white; */
+  /* background-color: transparent; */
+  background-image: linear-gradient(135deg, #e6a37c, #d88b61);
+  border: 2px solid #d88b61;
   margin: 0;
   color: white;
   height: 72px;
@@ -1484,10 +1492,46 @@ form {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.direction_list_item_link:hover,
+.direction_list_item_link:hover {
+  /* background-color: white;
+  color: #002c43d9; */
+  transform: translateY(-2px);
+  background-image: none;
+  background-color: transparent;
+}
+
 .direction_list_item_link:focus {
-  background-color: white;
-  color: #002c43d9;
+  transform: none;
+  background-image: linear-gradient(135deg, #e6a37c, #d88b61);
+  background-color: transparent;
+}
+
+/* Фокус только для клавиатуры */
+.direction_list_item_link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .direction_list_item_link:hover {
+    transform: translateY(-2px);
+    background-image: none;
+    background-color: transparent;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .direction_list_item_link:hover {
+    transform: none;
+    background-image: linear-gradient(135deg, #e6a37c, #d88b61);
+    background-color: transparent;
+  }
+
+  .direction_list_item_link:active {
+    transform: translateY(-2px);
+    background-image: none;
+    background-color: transparent;
+  }
 }
 
 .record .container,
@@ -1539,7 +1583,7 @@ form {
 }
 .record_list_item_link,
 .individual_list_item_link {
-  font-size: 16px;
+  font-size: 20px;
   display: block;
   text-decoration: none;
   background-image: var(--btn_background_color);
@@ -1554,7 +1598,7 @@ form {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 208px;
-  height: 53px;
+  height: 66px;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
@@ -1625,6 +1669,7 @@ form {
   font-size: 24px;
   line-height: 1.62;
   text-align: center;
+  color: white;
 }
 
 .regular_sublist_time {
@@ -1660,7 +1705,9 @@ form {
   line-height: 1.5;
   text-align: center;
 }
-
+.regular_sublist_item_text {
+  color: white;
+}
 .bond_regular_list {
   font-weight: 700;
 }
@@ -1709,13 +1756,17 @@ form {
 .individual_item_img {
   width: 600px;
 }
-.individual_item_subheading {
+.individual_item_subheading,
+.coach_item h3 {
   font-family: var(--second_font);
   font-weight: 700;
   font-size: 24px;
   line-height: 1.62;
   text-align: center;
   margin-bottom: 20px;
+}
+.coach_item h3 {
+  margin: 0;
 }
 .individual_sublist_item_text {
   font-family: var(--second_font);
@@ -1964,6 +2015,9 @@ form {
   font-weight: 700;
   max-width: 100%;
 }
+.telegram_btn_session {
+  width: 390px;
+}
 .telegram_btn_marathon {
   height: 88px;
 }
@@ -1990,7 +2044,7 @@ form {
   flex: 1;
 }
 .coach_text p {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.5;
   font-family: var(--second_font);
   font-weight: 500;
@@ -2192,6 +2246,52 @@ form {
   margin-bottom: 20px;
 }
 
+.wrapp_video_regular {
+  position: relative;
+}
+
+.regular_list_item_index {
+  font-family: var(--second_font);
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.record_list_btn {
+  box-sizing: border-box;
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  background-image: linear-gradient(135deg, #e6a37c, #d88b61);
+  border: 2px solid #d88b61;
+  padding: 17px 24px;
+  font-family: var(--second_font);
+  transition:
+    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 228px;
+  height: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.record_list_btn:hover,
+.record_list_btn:focus {
+  transform: translateY(-2px);
+  background-image: none;
+  background-color: transparent;
+}
+
+.regular_sublist li.regular_sublist_item_index {
+  list-style: none;
+  text-align: center;
+}
+
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -2292,10 +2392,10 @@ form {
     top: -100px;
     display: unset;
   }
-  .tai_text p,
+  /* .tai_text p,
   .chan_text p {
     font-size: 28px;
-  }
+  } */
   .tai_location_section {
     padding: 40px 60px 80px;
   }
@@ -2326,6 +2426,9 @@ form {
   .direction_list {
     flex-direction: row;
   }
+  .direction_list_item div {
+    flex: 1;
+  }
   .individual_list {
     flex-direction: row;
     align-items: flex-start;
@@ -2347,6 +2450,9 @@ form {
     margin-bottom: unset;
   }
 
+  .tai_info_list {
+    margin-bottom: 20px;
+  }
   .individual_item_heading {
     font-size: 24px;
   }
@@ -2372,13 +2478,17 @@ form {
   }
 
   .direction_list_item {
-    height: 284px;
+    min-height: 284px;
+    height: auto;
   }
   .left_block {
     padding: 30px 22px;
   }
   .wrapp_about_consumer {
     padding: 20px 0;
+  }
+  .wrapp_about_consumer_first {
+    padding-top: 40px;
   }
   .wrapp_video_block {
     padding-top: 20px;
@@ -2394,7 +2504,7 @@ form {
     letter-spacing: -0.02em;
   }
   .wrapp_main_text {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.5;
   }
 
@@ -2448,6 +2558,9 @@ form {
     font-size: 20px;
     line-height: 1.2;
   }
+  .coach_item {
+    gap: 20px;
+  }
   .about_btn {
     width: 228px;
     height: 67px;
@@ -2476,7 +2589,24 @@ form {
     top: -240px;
   }
   .direction_list_item_title {
-    font-size: 20px;
+    min-height: calc(1.25em * 2);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+  .direction_list_item_text {
+    min-height: calc(1.4em * 3);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .direction_list_item_link {
+    margin-top: auto;
   }
   .decoration_images_right {
     width: 84px;
@@ -2536,7 +2666,8 @@ form {
     line-height: 1.62;
   } */
   .item_consumer_text > p,
-  .block_yin_item > p {
+  .block_yin_item > p,
+  .coach_item_text {
     max-width: 718px;
     font-size: 20px;
     line-height: 1.5;
@@ -2674,7 +2805,7 @@ form {
     margin: 0;
   }
   .tai_info_title {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
   .tai_info_time {
     flex-direction: row;
@@ -2703,6 +2834,24 @@ form {
   .individual_sublist {
     height: 270px;
   }
+
+  .consumer_lesson_index {
+    width: 800px;
+  }
+  .regular_list_item_index {
+    max-width: 418px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .consumer_lesson_index .item_consumer_text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .regular_sublist_index {
+    max-width: 600px;
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -2726,9 +2875,6 @@ form {
   .img_prev {
     height: 350px;
   }
-  .direction_list_item {
-    height: 248px;
-  }
   .psychology_list {
     flex-direction: row;
   }
@@ -2737,6 +2883,15 @@ form {
   }
 }
 @media screen and (min-width: 1040px) {
+  .direction_list_item_link {
+    width: 100%;
+  }
+  .direction_list_item {
+    padding: 25px;
+  }
+  .consumer_lesson_index {
+    width: 980px;
+  }
   .nav_mob {
     display: none;
   }
@@ -2751,11 +2906,17 @@ form {
   .individual_sublist {
     height: 210px;
   }
+
+  .direction .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 @media screen and (min-width: 1280px) {
-  .direction_list_item_link {
-    width: 100%;
+  .consumer_lesson_index {
+    width: 1100px;
   }
+
   .psychology_title {
     width: 1390px;
   }
@@ -2822,7 +2983,6 @@ form {
   .direction_list_item {
     width: 550px;
     padding: 45px;
-    height: 350px;
   }
   .about_text_marathon2 {
     margin-bottom: 0;
@@ -2844,6 +3004,9 @@ form {
   .wrapp_about_consumer {
     padding: 40px 0;
   }
+  .wrapp_about_consumer_first {
+    padding-top: 80px;
+  }
   .consumer_title {
     font-size: 46px;
     line-height: 1.62;
@@ -2852,10 +3015,10 @@ form {
   .decoration_blue_image_regular {
     width: 184px;
     height: 432px;
-    top: 640px;
+    top: -240px;
   }
   .decoration_orange_image_regular {
-    bottom: 400px;
+    bottom: 870px;
     width: 96px;
     height: 96px;
   }
@@ -2889,6 +3052,7 @@ form {
   .wrapp_video_block {
     position: relative;
     padding-top: 40px;
+    padding-bottom: 40px;
   }
   .video_second {
     height: 270px;
@@ -3236,7 +3400,21 @@ form {
     margin: 0;
   }
   .tai_info_title {
-    margin-bottom: 0;
+    margin-bottom: 20px;
+  }
+  .regular_list_item_index2 {
+    font-size: 20px;
+    line-height: 1.5;
+    /* width: 701px; */
+  }
+  .regular_list_item_index {
+    max-width: unset;
+    font-size: 20px;
+    line-height: 1.5;
+    width: 701px;
+  }
+  .regular_list_item_index2 {
+    width: 400px;
   }
 }
 
@@ -3296,12 +3474,16 @@ form {
   .left_list {
     max-width: 1100px;
   }
+  .item_consumer_text > p.regular_list_item_index {
+    width: unset;
+    max-width: unset;
+  }
+  .wrapp_video_regular {
+    position: relative;
+  }
 }
 
 @media screen and (min-width: 1690px) {
-  .direction_list_item {
-    height: 308px;
-  }
   .feedback_container {
     display: flex;
     flex-direction: column;

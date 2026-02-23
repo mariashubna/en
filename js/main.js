@@ -198,7 +198,7 @@ $(".buy_course_btn").on("click", function (e) {
       {
         scrollTop: scrollToPosition,
       },
-      800
+      800,
     );
   }
 });
@@ -408,7 +408,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       threshold: 0.2,
-    }
+    },
   );
 
   items.forEach((item) => observer.observe(item));
@@ -422,13 +422,13 @@ document.querySelectorAll(".lazy-video").forEach((video) => {
     const iframe = document.createElement("iframe");
     iframe.setAttribute(
       "src",
-      `https://www.youtube.com/embed/${videoId}?autoplay=1`
+      `https://www.youtube.com/embed/${videoId}?autoplay=1`,
     );
     iframe.setAttribute("allowfullscreen", "");
     iframe.className = "video_placeholder video_iframe";
     iframe.setAttribute(
       "allow",
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
     );
     video.innerHTML = "";
     video.appendChild(iframe);
@@ -451,15 +451,18 @@ document.addEventListener("DOMContentLoaded", () => {
               item.classList.add("show");
             }, index * 600);
           });
-          setTimeout(() => {
-            button.classList.add("show");
-          }, listItems.length * 600 + 400);
+          setTimeout(
+            () => {
+              button.classList.add("show");
+            },
+            listItems.length * 600 + 400,
+          );
 
           observer.unobserve(section);
         }
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.3 },
   );
 
   observer.observe(section);
