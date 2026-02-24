@@ -349,13 +349,19 @@
   max-width: 600px;
 }
 .wrapp_main_text {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-family: var(--main_font);
   color: black;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   text-align: center;
+}
+.wrapp_main_text_tai {
+  margin-bottom: 20px;
+}
+.wrapp_main_text_gigong {
+  margin-bottom: 20px;
 }
 
 .wrapp_main_text_index {
@@ -683,6 +689,9 @@
 .wrapp_feedback_block {
   padding: 15px 0;
 }
+.wrapp_feedback_block_chan {
+  padding-top: 0;
+}
 .wrapp_feedback_block_training {
   padding-top: 0;
 }
@@ -691,9 +700,7 @@
   padding: 30px 10px;
   border-radius: 20px;
 }
-.feedback_container_training {
-  padding-bottom: 60px;
-}
+
 .feedback_title {
   font-family: var(--main_font);
   font-weight: 700;
@@ -718,9 +725,9 @@
   margin: 0 auto;
 }
 
-.wrapp_feedback_part {
+/* .wrapp_feedback_part {
   margin-bottom: 40px;
-}
+} */
 .wrapp_feedback_part_marathon {
   margin-bottom: 0;
 }
@@ -738,7 +745,7 @@
 
 .wrapp_feedback_center {
   cursor: unset;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 .wrapp_feedback_items:active {
   cursor: grabbing;
@@ -936,7 +943,7 @@
   letter-spacing: -0.06em;
   text-align: center;
   color: #000;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   font-family: var(--second_font);
 }
 .form_info_training {
@@ -1432,7 +1439,7 @@ form {
   left: -50px;
   width: 278px;
   height: 267px;
-  top: 200px;
+  top: 400px;
   clip-path: polygon(50px 0, 100% 0, 100% 100%, 50px 100%);
 }
 
@@ -1519,7 +1526,9 @@ form {
   font-weight: 600;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.consumer_list_gigong {
+  margin-bottom: 30px;
+}
 .direction_list_item_link:hover {
   /* background-color: white;
   color: #002c43d9; */
@@ -1673,7 +1682,7 @@ form {
   font-family: var(--main_font);
   font-weight: 700;
   font-size: 32px;
-  line-height: 1.62;
+  line-height: 1.22;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -1729,7 +1738,7 @@ form {
   font-family: var(--second_font);
   color: #25282d;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   text-align: center;
 }
@@ -1740,7 +1749,7 @@ form {
   font-weight: 700;
 }
 .individual {
-  padding: 30px;
+  padding: 30px 0 60px;
 }
 
 .individual_img {
@@ -1865,7 +1874,7 @@ form {
 }
 .request,
 .approach {
-  padding: 40px 0 0;
+  padding: 30px 0 0;
 }
 .request {
   position: relative;
@@ -1879,7 +1888,7 @@ form {
   display: none;
 }
 .education {
-  padding: 40px 0 0;
+  padding: 30px 0 0;
 }
 .decoration_right_psyh {
   position: absolute;
@@ -1900,7 +1909,7 @@ form {
   background: var(--block_backround_color);
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 .education_list {
   display: flex;
@@ -1940,7 +1949,7 @@ form {
 }
 .education_item p {
   height: unset;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: var(--second_font);
   max-height: 400px;
@@ -1956,7 +1965,7 @@ form {
 }
 .approach > div > p {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: var(--second_font);
 }
@@ -1964,14 +1973,14 @@ form {
   margin-bottom: 20px;
 }
 .psycholog_contact {
-  padding: 40px 0;
+  padding: 30px 0;
   position: relative;
 }
 .psychology_list {
   width: 1115px;
   gap: 30px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
@@ -1999,7 +2008,7 @@ form {
 }
 
 .psychology_list > li > p {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: var(--second_font);
   font-weight: 700;
@@ -2041,6 +2050,9 @@ form {
 .telegram_btn_session {
   width: 390px;
 }
+.telegram_btn_session_coach {
+  margin-top: 20px;
+}
 .telegram_btn_marathon {
   height: 88px;
 }
@@ -2067,10 +2079,10 @@ form {
   flex: 1;
 }
 .coach_text p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: var(--second_font);
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -2079,7 +2091,7 @@ form {
   padding-bottom: 60px;
 }
 .coach {
-  padding: 40px 0 0;
+  padding: 30px 0 0;
   position: relative;
 }
 .coach_item {
@@ -2114,10 +2126,18 @@ form {
   font-weight: 500;
   text-align: center;
 }
-.tai_title {
+.tai_text p .tai_title {
   margin-bottom: 0;
 }
-.tai_info {
+
+.tai_text p.tai_text_train {
+  font-weight: 700;
+}
+
+.tai_text_train .tai_info {
+  padding: 30px 0 15px;
+}
+.tai_info_train {
   padding: 30px 0 15px;
 }
 .tai_info_text {
@@ -2191,7 +2211,7 @@ form {
 .tai_location,
 .tai_location2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: var(--second_font);
   margin-bottom: 20px;
@@ -2208,14 +2228,14 @@ form {
 .about_teacher_wrapp_training {
   position: relative;
 }
-.tai_loc_section {
-  padding-bottom: 30px;
-}
+
 .tai_location_section {
   padding: 40px 10px 80px;
 }
+
 .tai_location_chan {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 .tai_location_section a {
   height: 66px;
@@ -2226,7 +2246,7 @@ form {
   display: block;
 }
 .tai_location2 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .decoration_blue_tai {
   position: absolute;
@@ -2247,7 +2267,7 @@ form {
   padding-left: 20px;
 }
 .chan_deco {
-  top: 550px;
+  top: 950px;
 }
 .chan_info,
 .chan_foundation {
@@ -2334,6 +2354,17 @@ form {
   width: 220px;
   max-width: 100%;
 }
+
+.chan_text p.wrapp_main_text_chan {
+  font-weight: 700;
+  font-size: 18px;
+}
+.tai_price_section_tai {
+  padding-top: 30px;
+}
+.form_info_gigong {
+  margin-bottom: 20px;
+}
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -2399,7 +2430,8 @@ form {
     width: 100%;
   }
   .drop_list {
-    width: 158px;
+    width: 200px;
+    text-align: center;
   }
   .drop_list2 {
     width: 164px;
@@ -2454,6 +2486,9 @@ form {
     top: -200px;
     display: unset;
   }
+  .psychology_list > li > p {
+    font-size: 20px;
+  }
   .tai_text p,
   .chan_text p {
     font-size: 24px;
@@ -2478,13 +2513,14 @@ form {
   }
   .section_title {
     font-size: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   .record_section_title {
     font-size: 46px;
   }
   .education_container {
     font-size: 46px;
+    gap: 40px;
   }
   .direction_list {
     flex-direction: row;
@@ -2524,7 +2560,14 @@ form {
   .individual_item_heading {
     font-size: 24px;
   }
+  .tai_location,
+  .tai_location2 {
+    font-size: 24px;
+  }
 
+  .tai_location2 {
+    margin-bottom: 40px;
+  }
   .main_index {
     padding-top: 300px;
     padding-bottom: 300px;
@@ -2536,7 +2579,9 @@ form {
   .decoration_blue_image_regular {
     display: unset;
   }
-
+  .approach > div > p {
+    font-size: 24px;
+  }
   .decoration_orange_image_regular {
     display: unset;
   }
@@ -2567,6 +2612,10 @@ form {
   .consumer_list_participation {
     margin-bottom: 40px;
   }
+
+  .psycholog_contact {
+    padding: 40px 0 80px;
+  }
   .wrapp_main_subtitle {
     font-size: 24px;
     line-height: 1.62;
@@ -2585,12 +2634,15 @@ form {
     font-size: 24px;
     line-height: 1.5;
   }
+  .coach {
+    padding-top: 40px;
+  }
 
   /* .wrapp_main_text2 {
     margin-bottom: 0;
   } */
   .tai_time_section {
-    padding-top: unset;
+    padding-top: 20px;
   }
   .right_block_form > h2 {
     font-size: 40px;
@@ -2606,6 +2658,9 @@ form {
   .wrapp_feedback_block {
     padding: 20px 0;
   }
+  .wrapp_feedback_block_training {
+    padding-top: 40px;
+  }
   .wrapp_block_form {
     padding: 20px 0 0;
   }
@@ -2613,7 +2668,7 @@ form {
     width: 498px;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 36px;
+    /* margin-bottom: 36px; */
   }
   .form_price {
     font-size: 20px;
@@ -2645,13 +2700,12 @@ form {
     width: 228px;
     height: 67px;
   }
-  .consumer_lesson {
+  /* .consumer_lesson {
     margin-bottom: 40px;
-  }
-  .left_title {
-    font-size: 40px;
-    line-height: 1.62;
-    /* width: 530px; */
+  } */
+
+  .regular_list_item_text {
+    font-size: 20px;
   }
   .left_list {
     padding: 0;
@@ -2665,17 +2719,27 @@ form {
   .wrapp_decoration_block {
     padding: 40px 0 20px;
   }
+  .wrapp_decoration_block_gigong {
+    padding-bottom: 0;
+  }
   .decoration_images_left {
     width: 288px;
     height: 288px;
 
     top: -240px;
   }
+  .chan_text p.wrapp_main_text_chan {
+    font-size: 24px;
+  }
+  .tai_location_chan {
+    padding-bottom: 20px;
+  }
   .chan_foundation_wrap p {
     font-size: 24px;
   }
   .tai_loc_section {
-    padding-bottom: 40px;
+    padding-bottom: 10px;
+    padding-top: 40px;
   }
   .direction_list_item_title {
     font-size: 24px;
@@ -2715,19 +2779,23 @@ form {
     margin-bottom: 30px;
     width: 718px;
   }
-
+  .about_text_gigoing {
+    margin-bottom: 0;
+  }
   .about_text_marathon2 {
     margin-bottom: 0;
   }
   .tai_info_time li {
     font-size: 20px;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
   }
   .block_yin {
     gap: 80px;
     margin-bottom: 30px;
   }
-
+  .education_item p {
+    font-size: 20px;
+  }
   .block_yin > li > img {
     width: 70px;
     height: 70px;
@@ -2756,6 +2824,9 @@ form {
   .item_consumer_text,
   .block_yin_item {
     padding: 20px 50px;
+  }
+  .coach_text p {
+    font-size: 24px;
   }
   .chan_section {
     padding: 0 0 40px;
@@ -2788,6 +2859,10 @@ form {
   .record_list_item_link,
   .individual_list_item_link {
     font-size: 20px;
+  }
+  .regular_sublist_item_text {
+    font-size: 20px;
+    margin-bottom: 10px;
   }
   .wrapp_about_product_down {
     padding: 0 170px;
@@ -2825,9 +2900,13 @@ form {
   .about_teacher_wrapp {
     padding: 20px 0;
   }
+  .coach_item h3 {
+    font-size: 24px;
+  }
   .about_teacher_wrapp_part {
     padding-top: 20px;
   }
+
   .teacher_img,
   .teacher_img_chan {
     width: 419px;
@@ -2923,12 +3002,15 @@ form {
   .tai_info_time {
     flex-direction: row;
     width: 1115px;
+    margin-bottom: 0;
   }
   .decoration_blue_tai {
     display: unset;
+    bottom: -10px;
   }
   .decoration_orange_tai {
     display: unset;
+    left: 72px;
   }
   .block_align {
     max-width: 750px;
@@ -2982,6 +3064,22 @@ form {
   .tai_info {
     padding: 40px 0 20px;
   }
+  .left_title {
+    font-size: 40px;
+    line-height: 1.62;
+    margin-bottom: 30px;
+    /* width: 530px; */
+  }
+  .wrapp_video_block_gigoing {
+    padding-bottom: 20px;
+  }
+  .wrapp_video_gigoing {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .right_block_form {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -3013,6 +3111,9 @@ form {
   }
 }
 @media screen and (min-width: 1040px) {
+  .psychology_list {
+    margin-bottom: 40px;
+  }
   .direction_list_item_link {
     width: 100%;
   }
@@ -3041,14 +3142,18 @@ form {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .section_title {
-    font-size: 46px;
-  }
+
   .tai_info {
     padding: 80px 0 40px;
   }
+  .coach {
+    padding: 40px 0 0;
+  }
 }
 @media screen and (min-width: 1280px) {
+  .section_title {
+    font-size: 46px;
+  }
   .request,
   .approach {
     padding: 40px 0;
@@ -3065,9 +3170,7 @@ form {
   .psychology {
     padding-bottom: 40px;
   }
-  .psycholog_contact {
-    padding: 40px 0 80px;
-  }
+
   .teacher_container .consumer_title {
     margin-bottom: 0;
   }
@@ -3078,9 +3181,9 @@ form {
   .psychology_title {
     width: 1390px;
   }
-  .wrapp_main_title {
+  /* .wrapp_main_title {
     margin-bottom: 0;
-  }
+  } */
   .psychology_wrap {
     height: 613px;
   }
@@ -3157,7 +3260,7 @@ form {
     height: 66px;
   }
   .wrapp_decoration_block {
-    padding: 80px 0 40px;
+    padding: 40px 0;
   }
   .wrapp_about_consumer {
     padding: 40px 0;
@@ -3170,11 +3273,22 @@ form {
     line-height: 1.62;
     margin-bottom: 40px;
   }
+  .chan_section,
+  .chan_info,
+  .chan_foundation,
+  .tai_location_chan {
+    padding-bottom: 80px;
+  }
+  .tai_location_chan {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
   .decoration_blue_image_regular {
     width: 184px;
     height: 432px;
     top: -240px;
   }
+
   .decoration_orange_image_regular {
     bottom: 1100px;
     width: 96px;
@@ -3314,6 +3428,9 @@ form {
   .wrapp_block_form {
     padding: 40px 0 0;
   }
+  .wrapp_block_form_tai {
+    padding-top: 80px;
+  }
   .teacher_img,
   .teacher_img_chan {
     width: 419px;
@@ -3348,7 +3465,7 @@ form {
     line-height: 1.5;
   }
   .about_teacher_wrapp {
-    padding: 80px 0 40px;
+    padding: 40px 0;
   }
   .about_teacher_wrapp_training {
     padding-top: 40px;
@@ -3478,6 +3595,7 @@ form {
     text-align: center;
     width: unset;
   }
+
   .left_price {
     font-size: 24px;
     line-height: 1.62;
@@ -3551,6 +3669,7 @@ form {
     margin-bottom: 40px;
   }
   .wrapp_main_text {
+    margin-bottom: 24px;
     margin-bottom: 40px;
   }
 
@@ -3571,8 +3690,24 @@ form {
     line-height: 1.5;
   }
 
-  regular_list_item_index3 {
+  .regular_list_item_index3 {
     width: 500px;
+  }
+  .tai_time_section_train {
+    padding-top: 0;
+  }
+  .tai_time_section_train {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+  .tai_loc_section {
+    padding-bottom: 50px;
+  }
+  .wrapp_block_form_train {
+    padding-top: 80px;
+  }
+  .wrapp_block_form_chan {
+    padding-top: 80px;
   }
 }
 
