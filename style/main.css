@@ -3719,6 +3719,9 @@ form {
   .wrapp_block_form_chan {
     padding-top: 80px;
   }
+  .wrapp_decoration_block_gigong {
+    padding-top: 80px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
