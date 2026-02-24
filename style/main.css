@@ -3336,6 +3336,9 @@ form {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  .direction_list {
+    padding: 40px 0;
+  }
   .video_second {
     height: 270px;
     margin-bottom: 40px;
