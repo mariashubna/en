@@ -290,8 +290,15 @@
   position: relative;
 }
 .wrapp_video_block {
+  padding-top: 30px;
+}
+.wrapp_video_block_tai {
   padding-top: 15px;
 }
+.wrapp_video_block_gigoing {
+  padding-top: 15px;
+}
+
 .left_block {
   width: 100%;
   background: var(--block_backround_color);
@@ -328,7 +335,7 @@
 .wrapp_main_title {
   font-family: var(--main_font);
   font-weight: 700;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1.41;
   letter-spacing: -0.03em;
   text-align: center;
@@ -480,7 +487,9 @@
   line-height: 1.22;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 20px;
+}
+.about_title_tai {
+  margin-bottom: 30px;
 }
 .about_text {
   font-family: var(--second_font);
@@ -489,9 +498,16 @@
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 20px;
 }
-
+.about_text_gigoing {
+  margin-bottom: 0;
+}
 .about_text_marathon {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.about_text_marathon2 {
   margin: 0 auto;
 }
 
@@ -557,7 +573,11 @@
 /* end about product block */
 /* about consumer */
 .wrapp_about_consumer {
-  padding: 15px 0;
+  padding: 30px 0 15px 0;
+}
+.wrapp_about_consumer_marathon {
+  padding-top: 15px;
+  padding-bottom: 0;
 }
 .consumer_title {
   font-family: var(--main_font);
@@ -574,14 +594,10 @@
   gap: 20px;
 }
 .consumer_list_participation {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .consumer_list_marathon {
-  margin-bottom: 40px;
-}
-
-.consumer_lesson {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 /* .block_yin_list {
@@ -600,6 +616,9 @@
   align-items: center;
 }
 
+.item_consumer_text {
+  padding: 30px;
+}
 .item_consumer_lesson {
   background: #002c43d9;
 }
@@ -664,6 +683,9 @@
 .wrapp_feedback_block {
   padding: 15px 0;
 }
+.wrapp_feedback_block_training {
+  padding-top: 0;
+}
 .feedback_container {
   background: var(--block_backround_color);
   padding: 30px 10px;
@@ -698,6 +720,9 @@
 
 .wrapp_feedback_part {
   margin-bottom: 40px;
+}
+.wrapp_feedback_part_marathon {
+  margin-bottom: 0;
 }
 
 .feedback_scroller {
@@ -784,9 +809,6 @@
   align-items: center;
 }
 
-.teacher_container .consumer_title {
-  margin-bottom: 0;
-}
 .teacher_img {
   margin-bottom: 25px;
 }
@@ -916,6 +938,9 @@
   color: #000;
   margin-bottom: 30px;
   font-family: var(--second_font);
+}
+.form_info_training {
+  margin-bottom: 0;
 }
 .form_access {
   font-weight: 700;
@@ -1228,6 +1253,9 @@ form {
   position: relative;
   padding: 30px 0 15px;
 }
+.wrapp_text_tai {
+  padding: 15px 0;
+}
 .decoration_images_left_page2 {
   position: absolute;
   z-index: -1;
@@ -1283,7 +1311,7 @@ form {
   font-weight: 800;
 }
 .left_price_second {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1415,6 +1443,7 @@ form {
   height: 383px;
   bottom: -90px;
   right: 0;
+  display: none;
 }
 
 .main_container {
@@ -1428,7 +1457,7 @@ form {
   margin-bottom: 0;
 }
 .direction {
-  padding: 80px 0 40px;
+  padding: 30px 0 0;
 }
 .direction_list {
   display: flex;
@@ -1443,7 +1472,7 @@ form {
   flex-direction: column;
   max-width: 550px;
   width: 100%;
-  padding: 15px;
+  padding: 30px;
   gap: 30px;
   border-radius: 20px;
   color: white;
@@ -1460,19 +1489,20 @@ form {
 }
 
 .direction_list_item_title {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.25;
 }
 .direction_list_item_text {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.4;
 }
 .direction_list_item_link {
   width: 100%;
+  max-width: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
   /* border: solid 2px transparent;
   border-color: white; */
@@ -1487,17 +1517,13 @@ form {
   border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  transition:
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .direction_list_item_link:hover {
   /* background-color: white;
   color: #002c43d9; */
-  transform: translateY(-2px);
   background-image: none;
-  background-color: transparent;
 }
 
 .direction_list_item_link:focus {
@@ -1583,8 +1609,10 @@ form {
 }
 .record_list_item_link,
 .individual_list_item_link {
-  font-size: 20px;
-  display: block;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background-image: var(--btn_background_color);
   background-color: #0070aa;
@@ -1644,10 +1672,10 @@ form {
 .section_title {
   font-family: var(--main_font);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1.62;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .regular_list {
   display: flex;
@@ -1666,7 +1694,7 @@ form {
 .regular_list_item_title {
   font-family: var(--second_font);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.62;
   text-align: center;
   color: white;
@@ -1712,7 +1740,7 @@ form {
   font-weight: 700;
 }
 .individual {
-  padding: 40px 0 80px;
+  padding: 30px;
 }
 
 .individual_img {
@@ -1746,7 +1774,7 @@ form {
 }
 .individual_item_heading {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.62;
   text-align: center;
   font-family: var(--second_font);
@@ -1760,7 +1788,7 @@ form {
 .coach_item h3 {
   font-family: var(--second_font);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.62;
   text-align: center;
   margin-bottom: 20px;
@@ -1771,16 +1799,12 @@ form {
 .individual_sublist_item_text {
   font-family: var(--second_font);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   text-align: center;
   color: #25282d;
 }
 /* psyhology */
-
-.psychology {
-  padding-bottom: 40px;
-}
 
 .psychology_container {
   display: flex;
@@ -1841,7 +1865,7 @@ form {
 }
 .request,
 .approach {
-  padding: 40px 0;
+  padding: 40px 0 0;
 }
 .request {
   position: relative;
@@ -1855,7 +1879,7 @@ form {
   display: none;
 }
 .education {
-  padding: 40px 0;
+  padding: 40px 0 0;
 }
 .decoration_right_psyh {
   position: absolute;
@@ -1930,9 +1954,6 @@ form {
   flex-direction: column;
   align-items: center;
 }
-.approach {
-  padding: 40px 0;
-}
 .approach > div > p {
   text-align: center;
   font-size: 24px;
@@ -1943,7 +1964,7 @@ form {
   margin-bottom: 20px;
 }
 .psycholog_contact {
-  padding: 40px 0 80px;
+  padding: 40px 0;
   position: relative;
 }
 .psychology_list {
@@ -1994,9 +2015,11 @@ form {
 .telegram_btn_marathon {
   width: 350px;
   height: 66px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background-image: var(--btn_background_color);
   background-color: #0070aa;
@@ -2056,7 +2079,7 @@ form {
   padding-bottom: 60px;
 }
 .coach {
-  padding: 80px 0 40px;
+  padding: 40px 0 0;
   position: relative;
 }
 .coach_item {
@@ -2085,7 +2108,7 @@ form {
 }
 .tai_text p,
 .chan_text p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: var(--second_font);
   font-weight: 500;
@@ -2095,11 +2118,11 @@ form {
   margin-bottom: 0;
 }
 .tai_info {
-  padding: 80px 0 40px;
+  padding: 30px 0 15px;
 }
 .tai_info_text {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: var(--second_font);
 }
@@ -2122,7 +2145,7 @@ form {
   width: 100%;
   gap: 30px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   justify-content: center;
   display: flex;
@@ -2155,7 +2178,7 @@ form {
   align-items: center;
   padding: 8px;
   height: 70px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.5;
   font-family: var(--second_font);
   font-weight: 700;
@@ -2178,12 +2201,15 @@ form {
 .tai_time_section {
   position: relative;
 }
+.tai_time_section {
+  padding-top: 15px;
+}
 
 .about_teacher_wrapp_training {
   position: relative;
 }
 .tai_loc_section {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 .tai_location_section {
   padding: 40px 10px 80px;
@@ -2214,7 +2240,7 @@ form {
 }
 /* chan */
 .chan_section {
-  padding: 0 0 40px;
+  padding: 0 0 30px;
 }
 .chan_container {
   padding-right: 20px;
@@ -2225,7 +2251,7 @@ form {
 }
 .chan_info,
 .chan_foundation {
-  padding: 40px 0;
+  padding: 0 0 30px 0;
 }
 .chan_img {
   width: 500px;
@@ -2237,7 +2263,7 @@ form {
 }
 .chan_foundation_wrap p {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   font-family: var(--second_font);
 }
@@ -2260,38 +2286,54 @@ form {
 
 .record_list_btn {
   box-sizing: border-box;
-  font-size: 20px;
-  display: block;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background-image: linear-gradient(135deg, #e6a37c, #d88b61);
   border: 2px solid #d88b61;
   padding: 17px 24px;
   font-family: var(--second_font);
-  transition:
-    background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 228px;
-  height: 60px;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  height: 72px;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
   color: #fff;
   margin: 0 auto;
   border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
 }
 
 .record_list_btn:hover,
 .record_list_btn:focus {
-  transform: translateY(-2px);
   background-image: none;
-  background-color: transparent;
 }
 
 .regular_sublist li.regular_sublist_item_index {
   list-style: none;
   text-align: center;
 }
-
+.consumer_lesson_index {
+  margin-bottom: 0;
+  max-width: 100%;
+}
+.regular_list_item_index {
+  width: 220px;
+  max-width: 100%;
+}
+.regular_list_item_index2 {
+  width: 220px;
+  max-width: 100%;
+}
+.regular_list_item_index3 {
+  width: 220px;
+  max-width: 100%;
+}
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -2306,6 +2348,18 @@ form {
 }
 
 @media screen and (min-width: 430px) {
+  .regular_list_item_index {
+    width: 300px;
+    max-width: 100%;
+  }
+  .regular_list_item_index2 {
+    width: 300px;
+    max-width: 100%;
+  }
+  .regular_list_item_index3 {
+    width: 350px;
+    max-width: 100%;
+  }
   .marathom_img {
     height: 400px;
   }
@@ -2370,8 +2424,16 @@ form {
   }
 }
 @media screen and (min-width: 834px) {
+  .decoration_images_main_right {
+    display: unset;
+  }
+  .individual_sublist_item_text {
+    font-size: 20px;
+  }
   .direction_list_item_link {
     width: 186px;
+    font-size: 20px;
+    max-width: unset;
   }
   .tai_container {
     padding: 0 40px;
@@ -2389,15 +2451,15 @@ form {
     flex-direction: row;
   }
   .decoration_img_psyh {
-    top: -100px;
+    top: -200px;
     display: unset;
   }
-  /* .tai_text p,
+  .tai_text p,
   .chan_text p {
-    font-size: 28px;
-  } */
+    font-size: 24px;
+  }
   .tai_location_section {
-    padding: 40px 60px 80px;
+    padding: 40px 60px 20px;
   }
   .decoration_images_main {
     display: unset;
@@ -2415,7 +2477,8 @@ form {
     padding: 25px 0;
   }
   .section_title {
-    font-size: 46px;
+    font-size: 40px;
+    margin-bottom: 40px;
   }
   .record_section_title {
     font-size: 46px;
@@ -2428,6 +2491,7 @@ form {
   }
   .direction_list_item div {
     flex: 1;
+    padding: 15px;
   }
   .individual_list {
     flex-direction: row;
@@ -2443,13 +2507,17 @@ form {
   .decoration_right_psyh {
     display: unset;
   }
-
+  .individual {
+    padding: 40px 0 80px;
+  }
   .regular_sublist_time {
     gap: 40px;
     flex-direction: row;
     margin-bottom: unset;
   }
-
+  .regular_list_item_title {
+    font-size: 24px;
+  }
   .tai_info_list {
     margin-bottom: 20px;
   }
@@ -2472,6 +2540,9 @@ form {
   .decoration_orange_image_regular {
     display: unset;
   }
+  .consumer_list_marathon {
+    margin-bottom: 40px;
+  }
 
   .individual_wrap {
     height: 470px;
@@ -2491,12 +2562,19 @@ form {
     padding-top: 40px;
   }
   .wrapp_video_block {
-    padding-top: 20px;
+    padding-top: 40px;
+  }
+  .consumer_list_participation {
+    margin-bottom: 40px;
   }
   .wrapp_main_subtitle {
     font-size: 24px;
     line-height: 1.62;
     letter-spacing: -0.04em;
+  }
+  .telegram_btn,
+  .telegram_btn_marathon {
+    font-size: 20px;
   }
   .wrapp_main_title {
     font-size: 48px;
@@ -2511,7 +2589,9 @@ form {
   /* .wrapp_main_text2 {
     margin-bottom: 0;
   } */
-
+  .tai_time_section {
+    padding-top: unset;
+  }
   .right_block_form > h2 {
     font-size: 40px;
     line-height: 1.62;
@@ -2565,6 +2645,9 @@ form {
     width: 228px;
     height: 67px;
   }
+  .consumer_lesson {
+    margin-bottom: 40px;
+  }
   .left_title {
     font-size: 40px;
     line-height: 1.62;
@@ -2588,7 +2671,14 @@ form {
 
     top: -240px;
   }
+  .chan_foundation_wrap p {
+    font-size: 24px;
+  }
+  .tai_loc_section {
+    padding-bottom: 40px;
+  }
   .direction_list_item_title {
+    font-size: 24px;
     min-height: calc(1.25em * 2);
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -2599,7 +2689,7 @@ form {
   }
   .direction_list_item_text {
     min-height: calc(1.4em * 3);
-
+    font-size: 20px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
@@ -2629,7 +2719,10 @@ form {
   .about_text_marathon2 {
     margin-bottom: 0;
   }
-
+  .tai_info_time li {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
   .block_yin {
     gap: 80px;
     margin-bottom: 30px;
@@ -2648,6 +2741,9 @@ form {
     line-height: 1.62;
     max-width: unset;
   }
+  .tai_info_text {
+    font-size: 24px;
+  }
   .second_list {
     gap: 30px;
     margin-bottom: 30px;
@@ -2660,6 +2756,9 @@ form {
   .item_consumer_text,
   .block_yin_item {
     padding: 20px 50px;
+  }
+  .chan_section {
+    padding: 0 0 40px;
   }
   /* .item_consumer_text > h3 {
     font-size: 24px;
@@ -2685,6 +2784,10 @@ form {
     width: 123px;
     height: 123px;
     top: -40px;
+  }
+  .record_list_item_link,
+  .individual_list_item_link {
+    font-size: 20px;
   }
   .wrapp_about_product_down {
     padding: 0 170px;
@@ -2731,7 +2834,13 @@ form {
     height: 382px;
     margin-bottom: 30px;
   }
-
+  .record_list_btn {
+    font-size: 20px;
+    width: 228px;
+    max-width: unset;
+    height: 60px;
+    margin-top: 0;
+  }
   .wrapp_left_block_teacher > div > .name_teacher {
     font-size: 24px;
     line-height: 1.62;
@@ -2798,6 +2907,10 @@ form {
   .about_teacher_second {
     padding: 40px 0 20px;
   }
+  .chan_info,
+  .chan_foundation {
+    padding: 0 0 40px 0;
+  }
   .wrapp_left_block_teacher {
     max-width: 818px;
   }
@@ -2839,9 +2952,20 @@ form {
     width: 800px;
   }
   .regular_list_item_index {
-    max-width: 418px;
+    max-width: unset;
     font-size: 20px;
     line-height: 1.5;
+  }
+  .regular_list_item_index {
+    width: 700px;
+  }
+
+  .regular_list_item_index2 {
+    width: 400px;
+  }
+
+  .regular_list_item_index3 {
+    width: 701px;
   }
 
   .consumer_lesson_index .item_consumer_text {
@@ -2851,6 +2975,12 @@ form {
   .regular_sublist_index {
     max-width: unset;
     width: auto;
+  }
+  .direction {
+    padding: 40px 0 0;
+  }
+  .tai_info {
+    padding: 40px 0 20px;
   }
 }
 
@@ -2911,8 +3041,36 @@ form {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .section_title {
+    font-size: 46px;
+  }
+  .tai_info {
+    padding: 80px 0 40px;
+  }
 }
 @media screen and (min-width: 1280px) {
+  .request,
+  .approach {
+    padding: 40px 0;
+  }
+  .decoration_img_psyh {
+    top: -100px;
+  }
+  .coach {
+    padding: 80px 0 40px;
+  }
+  .education {
+    padding: 40px 0;
+  }
+  .psychology {
+    padding-bottom: 40px;
+  }
+  .psycholog_contact {
+    padding: 40px 0 80px;
+  }
+  .teacher_container .consumer_title {
+    margin-bottom: 0;
+  }
   .consumer_lesson_index {
     width: 1100px;
   }
@@ -3018,7 +3176,7 @@ form {
     top: -240px;
   }
   .decoration_orange_image_regular {
-    bottom: 870px;
+    bottom: 1100px;
     width: 96px;
     height: 96px;
   }
@@ -3409,14 +3567,10 @@ form {
   }
 
   .regular_list_item_index {
-    max-width: unset;
     font-size: 20px;
     line-height: 1.5;
-    width: 701px;
   }
-  .regular_list_item_index2 {
-    width: 400px;
-  }
+
   regular_list_item_index3 {
     width: 500px;
   }
@@ -3488,6 +3642,10 @@ form {
 }
 
 @media screen and (min-width: 1690px) {
+  .decoration_orange_image_regular {
+    width: 96px;
+    height: 96px;
+  }
   .feedback_container {
     display: flex;
     flex-direction: column;
