@@ -2341,6 +2341,7 @@ form {
 .consumer_lesson_index {
   margin-bottom: 0;
   max-width: 100%;
+  opacity: unset;
 }
 .regular_list_item_index {
   width: 220px;
@@ -2364,6 +2365,15 @@ form {
 }
 .form_info_gigong {
   margin-bottom: 20px;
+}
+
+.item_consumer_text_index {
+  opacity: unset;
+}
+.consumer_lesson_index {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 /* adapt */
 
