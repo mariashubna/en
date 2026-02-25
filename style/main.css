@@ -77,12 +77,46 @@
   max-width: 100%;
 }
 
-.modal_btn:hover,
+/* .modal_btn:hover,
 .modal_btn:focus {
   color: black;
   border: solid 2px #002c43;
   background-image: none;
   background-color: transparent;
+} */
+
+.modal_btn:hover,
+.buy_course_btn:hover {
+  color: black;
+  border: 2px solid #002c43;
+  background-image: none;
+  background-color: transparent;
+}
+
+.modal_btn:focus,
+.buy_course_btn:focus {
+  outline: none;
+}
+
+.modal_btn:focus-visible,
+.buy_course_btn:focus-visible {
+  outline: 2px solid #002c43;
+  outline-offset: 3px;
+}
+
+.modal_btn:active,
+.buy_course_btn:active {
+  transform: translateY(1px);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .modal_btn:hover,
+  .buy_course_btn:hover {
+    color: #fff;
+    border: 2px solid transparent;
+    background-image: var(--btn_background_color);
+    background-color: #0070aa;
+  }
 }
 .modal_close {
   position: absolute;
@@ -1095,7 +1129,7 @@ form {
 .wrapp_main_text2 {
   max-width: 100%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .marathon_text {
   margin-bottom: 40px;
@@ -1536,20 +1570,19 @@ form {
 }
 
 .direction_list_item_link:focus {
-  transform: none;
   background-image: linear-gradient(135deg, #e6a37c, #d88b61);
   background-color: transparent;
 }
 
 /* Фокус только для клавиатуры */
-.direction_list_item_link:focus-visible {
+.direction_list_item_link:focus-visible,
+.record_list_btn:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 3px;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .direction_list_item_link:hover {
-    transform: translateY(-2px);
     background-image: none;
     background-color: transparent;
   }
@@ -1567,6 +1600,36 @@ form {
     background-image: none;
     background-color: transparent;
   }
+}
+
+.record_list_btn {
+  box-sizing: border-box;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-image: linear-gradient(135deg, #e6a37c, #d88b61);
+  border: 2px solid #d88b61;
+  padding: 17px 24px;
+  font-family: var(--second_font);
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  height: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+}
+
+.record_list_btn:hover,
+.record_list_btn:focus {
+  background-image: none;
 }
 
 .record .container,
@@ -1643,7 +1706,7 @@ form {
   margin: 0 auto;
 }
 
-.record_list_item_link:hover,
+/* .record_list_item_link:hover,
 .individual_list_item_link:hover,
 .individual_list_item_link:focus,
 .record_list_item_link:focus {
@@ -1651,6 +1714,45 @@ form {
   border: solid 2px #002c43;
   background-image: none;
   background-color: transparent;
+} */
+
+/* hover — для мыши */
+.record_list_item_link:hover,
+.individual_list_item_link:hover {
+  color: black;
+  border: 2px solid #002c43;
+  background-image: none;
+  background-color: transparent;
+}
+
+/* убираем залипание после клика */
+.record_list_item_link:focus,
+.individual_list_item_link:focus {
+  outline: none;
+}
+
+/* фокус только для клавиатуры */
+.record_list_item_link:focus-visible,
+.individual_list_item_link:focus-visible {
+  outline: 2px solid #002c43;
+  outline-offset: 3px;
+}
+
+/* эффект нажатия */
+.record_list_item_link:active,
+.individual_list_item_link:active {
+  transform: translateY(1px);
+}
+
+/* фикс для тач-устройств */
+@media (hover: none) and (pointer: coarse) {
+  .record_list_item_link:hover,
+  .individual_list_item_link:hover {
+    color: #fff;
+    border: 2px solid transparent;
+    background-image: var(--btn_background_color);
+    background-color: #0070aa;
+  }
 }
 
 .regular {
@@ -2057,12 +2159,51 @@ form {
   height: 88px;
 }
 
-.telegram_btn:hover,
+/* .telegram_btn:hover,
 .telegram_btn_marathon:hover {
   color: black;
   border: solid 2px #002c43;
   background-image: none;
   background-color: transparent;
+} */
+
+/* hover — только для мыши */
+.telegram_btn:hover,
+.telegram_btn_marathon:hover {
+  color: black;
+  border: 2px solid #002c43;
+  background-image: none;
+  background-color: transparent;
+}
+
+/* убираем визуальный эффект от обычного focus */
+.telegram_btn:focus,
+.telegram_btn_marathon:focus {
+  outline: none;
+}
+
+/* фокус только при навигации с клавиатуры */
+.telegram_btn:focus-visible,
+.telegram_btn_marathon:focus-visible {
+  outline: 2px solid #002c43;
+  outline-offset: 3px;
+}
+
+/* лёгкий эффект нажатия */
+.telegram_btn:active,
+.telegram_btn_marathon:active {
+  transform: translateY(1px);
+}
+
+/* на тач-устройствах hover не должен “липнуть” */
+@media (hover: none) and (pointer: coarse) {
+  .telegram_btn:hover,
+  .telegram_btn_marathon:hover {
+    color: #fff;
+    border: 2px solid transparent;
+    background-image: var(--btn_background_color);
+    background-color: #0070aa;
+  }
 }
 .psychology_list li.show,
 .telegram_btn.show {
@@ -2304,36 +2445,6 @@ form {
   line-height: 1.5;
 }
 
-.record_list_btn {
-  box-sizing: border-box;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  background-image: linear-gradient(135deg, #e6a37c, #d88b61);
-  border: 2px solid #d88b61;
-  padding: 17px 24px;
-  font-family: var(--second_font);
-  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  height: 72px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
-  color: #fff;
-  margin: 0 auto;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 300px;
-  margin-top: 10px;
-}
-
-.record_list_btn:hover,
-.record_list_btn:focus {
-  background-image: none;
-}
-
 .regular_sublist li.regular_sublist_item_index {
   list-style: none;
   text-align: center;
@@ -2375,6 +2486,9 @@ form {
   flex-direction: column;
   gap: 20px;
 }
+.span_defis {
+  display: none;
+}
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -2389,6 +2503,9 @@ form {
 }
 
 @media screen and (min-width: 430px) {
+  .span_defis {
+    display: unset;
+  }
   .regular_list_item_index {
     width: 300px;
     max-width: 100%;
@@ -2455,11 +2572,7 @@ form {
     max-width: 500px;
   }
 }
-@media screen and (min-width: 600px) {
-  /* .left_title {
-    max-width: 600px;
-  } */
-}
+
 @media screen and (min-width: 700px) {
   .left_list {
     max-width: 635px;
@@ -2648,9 +2761,9 @@ form {
     padding-top: 40px;
   }
 
-  /* .wrapp_main_text2 {
-    margin-bottom: 0;
-  } */
+  .wrapp_main_text2 {
+    margin-bottom: 40px;
+  }
   .tai_time_section {
     padding-top: 20px;
   }
@@ -3089,6 +3202,12 @@ form {
   }
   .right_block_form {
     margin-bottom: 40px;
+  }
+  .video_placeholder_hero {
+    height: 331px;
+  }
+  .video_placeholder_tai {
+    height: 331px;
   }
 }
 
@@ -3728,11 +3847,27 @@ form {
   .wrapp_decoration_block_gigong {
     padding-top: 80px;
   }
+  .video_placeholder_hero {
+    width: 530px;
+    max-width: unset;
+  }
+  .video_placeholder_tai {
+    height: 300px;
+    width: 533px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .video_placeholder {
     height: 360px;
+    width: 530px;
+  }
+  .video_placeholder_hero {
+    width: 640px;
+  }
+  .video_placeholder_tai {
+    height: 298px;
   }
   .video_second {
     height: 300px;
