@@ -1581,6 +1581,12 @@ form {
   outline-offset: 3px;
 }
 
+.individual_wrap_needs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .direction_list_item_link:hover {
     background-image: none;
@@ -1863,7 +1869,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  align-items: center;
 }
 
 .individual_wrap {
@@ -1880,7 +1885,6 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  width: calc(100% - 50px);
   justify-content: space-between;
 }
 .individual_item_heading {
@@ -2489,6 +2493,13 @@ form {
 .span_defis {
   display: none;
 }
+
+.individual_container {
+  width: 100%;
+  background: var(--block_backround_color);
+  border-radius: 20px;
+  padding: 30px 20px;
+}
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -2652,9 +2663,14 @@ form {
     flex: 1;
     padding: 15px;
   }
-  .individual_list {
+  /* .individual_list {
     flex-direction: row;
     align-items: flex-start;
+  } */
+  .individual_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
   .record_list {
     flex-direction: row;
@@ -2667,7 +2683,7 @@ form {
     display: unset;
   }
   .individual {
-    padding: 40px 0 80px;
+    padding: 40px 0;
   }
   .regular_sublist_time {
     gap: 40px;
@@ -2737,7 +2753,7 @@ form {
   }
 
   .psycholog_contact {
-    padding: 40px 0 80px;
+    padding: 40px 0;
   }
   .wrapp_main_subtitle {
     font-size: 24px;
@@ -3149,9 +3165,9 @@ form {
   .individual_item_subheading {
     font-size: 22px;
   }
-  .individual_sublist {
+  /* .individual_sublist {
     height: 270px;
-  }
+  } */
 
   .consumer_lesson_index {
     width: 800px;
@@ -3209,6 +3225,16 @@ form {
   .video_placeholder_tai {
     height: 331px;
   }
+  .individual_container {
+    padding: 30px 22px;
+  }
+  .individual_sublist {
+    /* height: 210px; */
+    max-width: 470px;
+  }
+  .education {
+    padding: 40px 0;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -3235,9 +3261,9 @@ form {
   .psychology_list {
     flex-direction: row;
   }
-  .individual_sublist {
+  /* .individual_sublist {
     height: 240px;
-  }
+  } */
 }
 @media screen and (min-width: 1040px) {
   .psychology_list {
@@ -3263,9 +3289,6 @@ form {
   .burger {
     display: none;
   }
-  .individual_sublist {
-    height: 210px;
-  }
 
   .direction .container {
     padding-left: 20px;
@@ -3280,8 +3303,13 @@ form {
   }
 }
 @media screen and (min-width: 1280px) {
+  .individual_sublist {
+    max-width: 574px;
+  }
+
   .section_title {
     font-size: 46px;
+    margin-bottom: 40px;
   }
   .request,
   .approach {
@@ -3293,9 +3321,7 @@ form {
   .coach {
     padding: 80px 0 40px;
   }
-  .education {
-    padding: 40px 0;
-  }
+
   .psychology {
     padding-bottom: 40px;
   }
@@ -3390,6 +3416,9 @@ form {
   }
   .wrapp_decoration_block {
     padding: 40px 0;
+  }
+  .wrapp_decoration_tai {
+    padding: 80px 0 40px;
   }
   .wrapp_about_consumer {
     padding: 40px 0;
@@ -3601,6 +3630,9 @@ form {
   }
   .about_teacher_wrapp {
     padding: 40px 0;
+  }
+  .about_teacher_gigong {
+    padding: 80px 0 40px;
   }
   .about_teacher_wrapp_training {
     padding-top: 40px;
@@ -3855,6 +3887,19 @@ form {
     height: 300px;
     width: 533px;
     margin-bottom: 20px;
+  }
+  .individual_container {
+    padding: 40px;
+    max-width: unset;
+  }
+  .individ_container {
+    padding: 0 20px;
+  }
+  .individual {
+    padding: 40px 0 80px;
+  }
+  .psycholog_contact {
+    padding: 40px 0 80px;
   }
 }
 
