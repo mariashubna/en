@@ -315,6 +315,10 @@
   text-decoration: none;
 }
 
+.drop_list a:hover {
+  color: #d3d9da;
+}
+
 /* End header */
 /* main section */
 .hidden-title {
@@ -661,6 +665,7 @@
 }
 .item_consumer_lesson {
   background: #002c43d9;
+  padding-top: 46px;
 }
 
 /* .item_consumer_text > h3 {
@@ -980,8 +985,9 @@
   /* margin-bottom: 30px; */
   font-family: var(--second_font);
 }
-.form_info_training {
-  margin-bottom: 0;
+.form_info_training,
+.form_info_chan {
+  margin-bottom: 36px;
 }
 .form_access {
   font-weight: 700;
@@ -999,6 +1005,7 @@
   letter-spacing: -0.04em;
   color: #000;
   text-align: center;
+  margin-bottom: 20px;
 }
 .form_price > span {
   color: rgb(139, 0, 0);
@@ -1008,6 +1015,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 16px;
 }
 
 #name,
@@ -2099,8 +2107,7 @@ form {
 }
 
 .psychology_list > li {
-  max-width: 250px;
-  min-width: 195px;
+  max-width: 420px;
   gap: 17px;
   text-align: center;
   width: 100%;
@@ -2110,20 +2117,26 @@ form {
   display: flex;
   align-items: center;
   padding: 8px;
-  height: 78px;
+  height: auto;
 }
 
-.psychology_list > li > p {
+.psychology_list2 > li > p {
   font-size: 16px;
   line-height: 1.5;
   font-family: var(--second_font);
   font-weight: 700;
-  max-width: 185px;
+  /* max-width: 185px; */
 }
 .psychology_list li {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease;
+}
+
+.coach_line {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid #002c43d9;
 }
 
 .telegram_btn,
@@ -2500,6 +2513,17 @@ form {
   border-radius: 20px;
   padding: 30px 20px;
 }
+
+.form_notice {
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(168, 180, 186, 0.75);
+  width: 100%;
+  text-align: center;
+}
+
 /* adapt */
 
 @media screen and (min-width: 386px) {
@@ -2568,19 +2592,25 @@ form {
     width: 100%;
   }
   .drop_list {
-    width: 200px;
+    width: 174px;
     text-align: center;
   }
   .drop_list2 {
-    width: 164px;
+    width: 168x;
   }
   .drop_list3 {
-    width: 230px;
+    width: 260px;
   }
+  /* .form_notice {
+    width: 380px;
+  } */
 }
 @media screen and (min-width: 520px) {
   .video_tai {
     max-width: 500px;
+  }
+  .tags {
+    font-size: 14px;
   }
 }
 
@@ -2590,6 +2620,11 @@ form {
   }
 }
 @media screen and (min-width: 834px) {
+  .tags {
+    right: 40px;
+    top: unset;
+    font-size: 14px;
+  }
   .decoration_images_main_right {
     display: unset;
   }
@@ -2622,6 +2657,9 @@ form {
   }
   .psychology_list > li > p {
     font-size: 20px;
+  }
+  .psychology_list > li {
+    height: 120px;
   }
   .tai_text p,
   .chan_text p {
@@ -3301,8 +3339,17 @@ form {
   .coach {
     padding: 40px 0 0;
   }
+  .psychology_list > li {
+    max-width: 270px;
+  }
+  .psychology_list2 > li:nth-child(2) {
+    max-width: 420px;
+  }
 }
 @media screen and (min-width: 1280px) {
+  .drop_list {
+    text-align: left;
+  }
   .individual_sublist {
     max-width: 574px;
   }
@@ -3647,7 +3694,7 @@ form {
   }
   .left_block_form {
     width: 50%;
-    padding: 152px 170px;
+    padding: 200px 170px 160px;
     border-radius: 20px 0 0 0;
   }
   .left_block_form::before {
@@ -3661,6 +3708,8 @@ form {
     border-radius: 0 0 20px 0;
     position: relative;
     bottom: -40px;
+    height: 600px;
+
     background: white;
   }
   .right_block_form2 {
@@ -3668,8 +3717,13 @@ form {
     padding-top: 80px;
   }
   .right_block_form3 {
-    height: 510px;
+    height: 580px;
     padding-top: 40px;
+    bottom: -56px;
+  }
+  .right_block_form4 {
+    height: 530px;
+    bottom: -75px;
   }
   #submit_form_btn {
     width: 206px;
@@ -3901,6 +3955,9 @@ form {
   .psycholog_contact {
     padding: 40px 0 80px;
   }
+  .right_block_form > p.form_notice {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -3972,6 +4029,15 @@ form {
   }
   .wrapp_video_regular {
     position: relative;
+  }
+  .right_block_form > p.form_notice {
+    margin-bottom: 0;
+  }
+  .right_block_form4 {
+    height: 500px;
+  }
+  .right_block_form3 {
+    height: 530px;
   }
 }
 
